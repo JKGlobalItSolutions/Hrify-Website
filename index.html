@@ -666,7 +666,161 @@
     </style>
 
             <!-- Testimonial Start -->
-             
+            <div class="container">
+                <div class="testimonial-container">
+                    <div class="testimonial-slider">
+                        <button class="nav-btn prev-btn" aria-label="Previous testimonial">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        
+                        <div class="testimonial-slides my-5">
+                            <!-- Slide 1 -->
+                            <div class="testimonial-slide">
+                                <img src="./Images/Home-Images/Testimonial image 1.png" alt="Testimonial 1">
+                            </div>
+                
+                            <!-- Slide 2 -->
+                            <div class="testimonial-slide">
+                                <img src="./Images/Home-Images/Testimonial image 2.png" alt="Testimonial 2">
+                            </div>
+                
+                            <!-- Slide 3 -->
+                            <div class="testimonial-slide">
+                                <img src="./Images/Home-Images/Testimonial Image 3.png" alt="Testimonial 3">
+                            </div>
+                        </div>
+                
+                        <button class="nav-btn next-btn" aria-label="Next testimonial">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <style>
+            .testimonial-container {
+                max-width: 100%;
+                margin: 0 auto;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .testimonial-slider {
+                position: relative;
+            }
+            
+            .testimonial-slides {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+            
+            .testimonial-slide {
+                min-width: 100%;
+                box-sizing: border-box;
+                padding: 0 100px; /* Increased padding for more space */
+            }
+            
+            .testimonial-slide img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 10px;
+            }
+            
+            .nav-btn {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                border: none;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                z-index: 10;
+                transition: background-color 0.3s ease;
+            }
+            
+            .nav-btn:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+            
+            .prev-btn {
+                left: 10px;
+            }
+            
+            .next-btn {
+                right: 10px;
+            }
+            
+            @media (max-width: 768px) {
+                .testimonial-slide {
+                    padding: 0 20px; /* Adjusted padding for mobile */
+                }
+            
+                .nav-btn {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+            </style>
+            
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const slidesContainer = document.querySelector('.testimonial-slides');
+                const slides = document.querySelectorAll('.testimonial-slide');
+                const prevBtn = document.querySelector('.prev-btn');
+                const nextBtn = document.querySelector('.next-btn');
+                let currentSlide = 0;
+            
+                function updateSlidePosition() {
+                    const slideWidth = slides[0].offsetWidth;
+                    const offset = currentSlide * slideWidth;
+                    slidesContainer.style.transform = `translateX(-${offset}px)`;
+                }
+            
+                function nextSlide() {
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    updateSlidePosition();
+                }
+            
+                function prevSlide() {
+                    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                    updateSlidePosition();
+                }
+            
+                nextBtn.addEventListener('click', () => {
+                    nextSlide();
+                    resetInterval();
+                });
+            
+                prevBtn.addEventListener('click', () => {
+                    prevSlide();
+                    resetInterval();
+                });
+            
+                let slideInterval = setInterval(nextSlide, 5000);
+            
+                function resetInterval() {
+                    clearInterval(slideInterval);
+                    slideInterval = setInterval(nextSlide, 5000);
+                }
+            
+                // Pause auto-sliding when hovering over the slider
+                slidesContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
+                slidesContainer.addEventListener('mouseleave', resetInterval);
+            
+                // Initialize first slide position
+                updateSlidePosition();
+            
+                // Update slide position on window resize
+                window.addEventListener('resize', updateSlidePosition);
+            });
+            </script>
             <!-- Testimonial end -->
 
   
@@ -676,34 +830,83 @@
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <h5 class="text-gradient fw-bolder">Explore More</h5>
+
+                    <a style="text-decoration: none;" href="index.html">
                     <p class="footer-text">Home</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
                     <p class="footer-text">Product</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
                     <p class="footer-text">Careers</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
                     <p class="footer-text">Channel Partner</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
                     <p class="footer-text">Blog</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
                     <p class="footer-text">Contact Us</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
                     <p class="footer-text">Pricing</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
                     <p class="footer-text">Clients</p>
+                    </a>
+
+                 
                 </div>
                 <div class="col-12 col-lg-3">
                     <h5 class="text-gradient fw-bolder">Our Services</h5>
-                    <p class="footer-text">Employee Management</p>
-                    <p class="footer-text">Attendance Tracking</p>
-                    <p class="footer-text">Leave Management</p>
-                    <p class="footer-text">Department Structuring</p>
-                    <p class="footer-text">Payroll Processing</p>
-                    <p class="footer-text">Payslip Generation</p>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Employee Management</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Attendance Tracking</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Leave Management</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Department Structuring</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payroll Processing</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payslip Generation</p>
+                        </a>
+                 
                 </div>
                 <div class="col-12 col-lg-3">
                     <h5 class="text-gradient fw-bolder">Why Choose HRIFY?</h5>
-                    <p class="footer-text">User-Friendly Design</p>
-                    <p class="footer-text">Customer Support</p>
-                    <p class="footer-text">Attendance Tracking</p>
-                    <p class="footer-text">Leave Management</p>
-                    <p class="footer-text">Request a Demo</p>
-                    <p class="footer-text">Department Structuring</p>
-                    <p class="footer-text">Payroll Processing</p>
-                    <p class="footer-text">Payslip Generation</p>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">User-Friendly Design</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Customer Support</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Attendance Tracking</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Leave Management</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Request a Demo</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Department Structuring</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payroll Processing</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payslip Generation</p>
+                        </a>
+                 
                 </div>
                 <div class="col-12 col-lg-3 justify-content-center text-center">
                     <img class="img-fluid" src="./Images/logos/footer logo.png" alt="HRIFY logo">
