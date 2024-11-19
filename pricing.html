@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRIFY Navigation</title>
+    <link rel="stylesheet" href="Styles/styles.css">
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-link {
+            color: #333;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+        }
+
+        .nav-link:hover {
+            color: red;
+        }
+
+
+        .btn-demo {
+            background-color: #FF0000;
+            color: white;
+            border-radius: 25px;
+            padding: 8px 24px;
+            margin-right: 10px;
+        }
+
+        .btn-signup {
+            background-color: #FF0000;
+            color: white;
+            border-radius: 25px;
+            padding: 8px 24px;
+        }
+
+        .btn-demo:hover,
+        .btn-signup:hover {
+            background-color: #E60000;
+            color: white;
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-nav {
+                padding: 1rem 0;
+            }
+
+            .nav-button-group {
+                margin-top: 1rem;
+                display: flex;
+                gap: 10px;
+            }
+        }
+    </style>
+    <style>
+        .text-gradient {
+            background: #FF0000;
+            background: linear-gradient(to top, #FF0000 100%, #990000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .background-gradient {
+            background: rgb(255, 0, 0);
+            background: linear-gradient(90deg, rgba(255, 0, 0, 1) 100%, rgba(153, 0, 0, 1) 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img style="height: 70px;" src="./Images/logos/Hrify Logo (2).png" alt="HRIFY Logo" class="img-fluid">
+            </a>
+            <style>
+                @media (max-width: 768px) {
+                    .navbar-brand img {
+                        height: 50px !important;
+                    }
+                }
+                @media (min-width: 992px) {
+                    .nav-item.dropdown:hover .dropdown-menu {
+                        display: block;
+                        margin-top: 0;
+                    }
+                }
+                .nav-item-hover:hover {
+                    color: #FF0000 !important;
+                }
+            </style>
+    
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navigation Items -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-item-hover" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 18px;">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="HrifyWeb.html">HRIFY Web Software</a></li>
+                            <li><a class="dropdown-item" href="HrifyMobile.html">HRIFY Mobile App</a></li>
+                            <li><a  class="dropdown-item" href="HrifyBooster.html">HRIFY Booster</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;color: red;" class="nav-link nav-item-hover" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="clients.html">Clients</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="carrer.html">Career</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="channelpartner.html">Channel Partner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+    
+                <!-- Action Buttons -->
+                <div class="nav-button-group">
+                    <a href="#" class="btn btn-demo">Demo</a>
+                    <a href="#" class="btn btn-signup">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+  
+
+
+ 
+
+
+
+ 
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .footer-text {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .footer-text:hover {
+            color: red !important;
+            cursor: pointer;
+        }
+
+        .social-icon {
+            transition: filter 0.3s ease;
+        }
+    </style>
+    <div class=" container justify-content-center">
+        <div class="row">
+            <div class="col-12 text-center d-flex justify-content-center align-items-center ">
+                <img style="height: 50px;"  src="./Images/logos/hrify pricing logo.png" alt="">
+                <h1 class="mx-1">Pricing</h1>
+            </div>
+            <div class="col-12 mt-3">
+                <h6  class="text-center fs-6 ">Choose the plan that suits your business needs. HRIFY offers flexible pricing to ensure that you get the best value for your HR management solution, whether you’re a small startup or a growing enterprise</h6>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container justify-content-center text-center mt-3 mb-2  ">
+        <img  class="img-fluid col-lg-6 col-12" src="./Images/Pricing/Hrify Pricing Image 1.png" alt="">
+    </div>
+  
+
+    <div class=" container justify-content-center text-center  my-3 ">
+        <img  class="img-fluid col-12 col-lg-6" src="./Images/Pricing/Hrify Pricing Image 2.png" alt="">
+    </div>
+
+   <div class="container my-5 ">
+    <div class=" container justify-content-center ">
+        <div class="row">
+            <div class="col-12 text-center d-flex justify-content-center align-items-center ">
+                <img style="height: 50px;"  src="./Images/Pricing/Hrify Pricing image 3.png" alt="">
+                <h1 class="mx-1">Pricing</h1>
+            </div>
+            <div class="col-12 mt-3">
+                <h6  class="text-center fs-6 ">"Select the plan that fits your business requirements. HRIFY BOOSTER offers flexible pricing to provide the best value for your HR management needs, whether you're a growing startup or an established enterprise."</h6>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container justify-content-center text-center mt-3 mb-2  ">
+        <img  class="img-fluid col-lg-6 col-12" src="./Images/Pricing/Hrify Pricing Image 4.jpg" alt="">
+    </div>
+  
+
+    <div class=" container justify-content-center text-center  my-3 ">
+        <img  class="img-fluid col-12 col-lg-6" src="./Images/Pricing/Hrify Pricing Image 5.png" alt="">
+    </div>
+   </div>
+
+
+  
+
+    <footer class="p-5" style="background-color: black;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <h5 class="text-gradient fw-bolder">Explore More</h5>
+
+                    <a style="text-decoration: none;" href="index.html">
+                    <p class="footer-text">Home</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                    <p class="footer-text">Product</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                    <p class="footer-text">Careers</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                    <p class="footer-text">Channel Partner</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                    <p class="footer-text">Blog</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                    <p class="footer-text">Contact Us</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                    <p class="footer-text">Pricing</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                    <p class="footer-text">Clients</p>
+                    </a>
+
+                 
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h5 class="text-gradient fw-bolder">Our Services</h5>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Employee Management</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Attendance Tracking</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Leave Management</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Department Structuring</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payroll Processing</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payslip Generation</p>
+                        </a>
+                 
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h5 class="text-gradient fw-bolder">Why Choose HRIFY?</h5>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">User-Friendly Design</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Customer Support</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Attendance Tracking</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Leave Management</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Request a Demo</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Department Structuring</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payroll Processing</p>
+                        </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payslip Generation</p>
+                        </a>
+                 
+                </div>
+                <div class="col-12 col-lg-3 justify-content-center text-center">
+                    <img class="img-fluid" src="./Images/logos/footer logo.png" alt="HRIFY logo">
+                    <h5 style="cursor: pointer;" class="background-gradient text-center mt-3 py-2 rounded text-light">Download Brochure</h5>
+                    <p class="footer-text"><i class="fa-regular fa-envelope"></i>&nbsp; support@hrify.in</p>
+                    <p class="footer-text"><i class="fa-solid fa-phone"></i>&nbsp; 8807880764</p>
+                    <div class="d-flex gap-3 justify-content-center">
+                        <img class="img-fluid social-icon" src="./Images/logos/facebook.png" alt="Facebook">
+                        <img class="img-fluid social-icon" src="./Images/logos/Youtube.png" alt="YouTube">
+                        <img class="img-fluid social-icon" src="./Images/logos/x icon.png" alt="Twitter">
+                        <img class="img-fluid social-icon" src="./Images/logos/linkedin.png" alt="LinkedIn">
+                        <img class="img-fluid social-icon" src="./Images/logos/instagram.png" alt="Instagram">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
