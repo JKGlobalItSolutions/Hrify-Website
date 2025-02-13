@@ -10,66 +10,28 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
         <link rel="stylesheet" href="./styles/style.css">
+        <script src="./components/includescript.js"></script>
+        <!-- banner styles and scripts -->
+        <script src="./bannerscript/bannerscript.js"></script>
+        <link rel="stylesheet" href="./bannerstyles/bannerstyle.css">
+
 
 </head>
 <body>
-   <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="./assets/logo/Frame 723.jpg" alt="HRIFY" height="30">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="talentmanagement.html">Talent Management</a></li>
-                <li class="nav-item"><a class="nav-link" href="Product.html">Product</a></li>
-                <li class="nav-item"><a class="nav-link" href="Industries.html">Industries</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Careers
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="Careers.html">Careers</a></li>
-                        <li><a class="dropdown-item" href="referral-program.html">Referral Program</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link contact-btn" href="./Contact Us.html">Contact Us</a>
-                </li>           
-             </ul>
+
+      <div id="navbar-container"></div>
+
+      <div class="banner-container">
+        <img src="./assets/banner/Services Banner.png" alt="IT Solutions Banner" class="banner-image">
+        <div class="overlay-text">
+            <h1>Smart IT Solutions Limitless Potential</h1>
+            <p class="banner-paragraph">Delivering tailored IT solutions that drive innovation, streamline operations, and keep your business ahead in the digital era.</p>
+            <button class="cta-button" id="cta-button">Unleash Your IT Potential</button>
         </div>
     </div>
-</nav>
-
-<!-- Full-Length Banner Section -->
-<section class="banner-section">
-    <div class="container-fluid p-0">
-        <img src="./assets/banner/Services Banner.png" alt="Banner Image" class="img-fluid w-100">
-    </div>
-</section>
 
 
-    <!-- Hero Section -->
-<section class="bg-light py-5">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8 mt-5">
-                <h1 class="h3 fw-bold mb-2 text-primary-light">Empowering Businesses with Cutting-Edge IT Solutions</h1>
-                <p class="lead mb-2">
-                    HRIFY is a comprehensive management solutions platform designed to enhance efficiency and drive growth. With specialized expertise, we seamlessly integrate cutting-edge technology with expert talent management to deliver exceptional software, web, and app development, advanced networking solutions, and expert IT services.
-                </p>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <img src="./assets/servicespage/hero/Frame 958.png" alt="JK Global IT Solutions" class="img-fluid">
-            </div>
-        </div>
-    </div>
-</section>
+
 <!-- What We Do Section -->
 <section class="py-5">
     <div class="container">
@@ -229,77 +191,11 @@
     </section>
 
 <!-- Footer -->
-<footer class="py-5" style="background-color: #1E1E1E;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                <h5 class="text-white mb-4">Quick Links</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Home</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Services</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Talent Management</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Product</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Industries</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Insights</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">About</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Careers</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                <h5 class="text-white mb-4">IT Services & Consulting</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Software Development</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Web Development</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">App Development</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">System Integration</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Networking Solutions</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-                <h5 class="text-white mb-4">Talent Management</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Contract Staffing and Placement</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Contract to Hire</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Permanent Staffing</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Supplier Rationalization</a></li>
-                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Hire, Train & Deploy</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center text-lg-end">
-                <img src="./assets/logo/Frame 723.jpg" alt="HRIFY" class="img-fluid mb-4" style="max-width: 200px;">
-                  <!-- Download Brochure Button -->
-                  <a href="./assets/pdf/HRIFY Staffing Solutions.pdf" class="btn btn-primary d-inline-block mb-4 w-80 px-4 py-2" style="background-color: #008B9B; border: none; border-radius: 30px;" download>
-                    Download Brochure
-                </a>
-              <!-- Social Media Icons Section -->
-<div class="d-flex justify-content-center justify-content-lg-end gap-3 mt-4">
-    <a href="https://facebook.com" target="_blank" class="text-white bg-primary rounded-circle d-flex align-items-center justify-content-center"
-        style="width: 40px; height: 40px; background-color: #008B9B !important;text-decoration: none">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://whatsapp.com" target="_blank" class="text-white bg-primary rounded-circle d-flex align-items-center justify-content-center"
-        style="width: 40px; height: 40px; background-color: #008B9B !important;text-decoration: none">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="https://twitter.com" target="_blank" class="text-white bg-primary rounded-circle d-flex align-items-center justify-content-center"
-        style="width: 40px; height: 40px; background-color: #008B9B !important;text-decoration: none">
-        <i class="fab fa-twitter"></i>
-    </a>
-    <a href="https://linkedin.com" target="_blank" class="text-white bg-primary rounded-circle d-flex align-items-center justify-content-center"
-        style="width: 40px; height: 40px; background-color: #008B9B !important;text-decoration: none">
-        <i class="fab fa-linkedin-in"></i>
-    </a>
-    <a href="https://instagram.com" target="_blank" class="text-white bg-primary rounded-circle d-flex align-items-center justify-content-center"
-        style="width: 40px; height: 40px; background-color: #008B9B !important; text-decoration: none;">
-        <i class="fab fa-instagram"></i>
-    </a>
-</div>
+<div id="footer"></div>
 
-            </div>
-        </div>
-    </div>
-</footer>
+
+
+
 <script src="./scripts/script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
