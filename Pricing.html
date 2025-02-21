@@ -5,26 +5,233 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HRIFY Technologies</title>
     <link rel="icon" type="image/png" href="./assets/logo/favicon/favicon.png" sizes="16x16">
-
-    <link rel="icon" type="image/png" href="./assets/logo/favicon/favicon.png" sizes="16x16">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
     <script src="./components/includescript.js"></script>
-
- 
     
-    </script>
+    <style>
+        .nav-tabs .nav-link {
+            border: none;
+            font-weight: bold;
+            color: black;
+        }
+        .nav-tabs .nav-link.active {
+            background-color: #007bff;
+            color: white;
+            border-radius: 10px;
+        }
+        .category-nav {
+            display: flex;
+            justify-content: flex-start;
+            margin-left: 15px;
+        }
+        .category-nav button {
+            background-color: #d3d3d3;
+            border: 2px solid yellow;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 10px;
+            color: black;
+            cursor: pointer;
+        }
+        .category-nav .active {
+            background-color: black;
+            color: white;
+        }
+        .image-section img {
+            width: 100%;
+            height: auto;
+        }
+        .pricing-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .pricing-header img {
+            width: 200px;
+            height: auto;
+        }
+        .pricing-subtext {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: gray;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .custom-dropdown {
+            position: relative;
+        }
+        .custom-dropdown select {
+            appearance: none;
+            width: 100%;
+            padding-right: 40px;
+        }
+        .custom-dropdown img {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            pointer-events: none;
+        }
+        .responsive-image-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 
-
     <div id="navbar-container"></div>
 
+    <div class="container mt-4">
+        <div class="pricing-header">
+            <img src="./assets/logo/Frame 999.png" alt="HRIFY Logo">
+            <span>Pricing</span>
+        </div>
+        <div class="pricing-subtext">
+            Choose the plan that suits your business needs. 
+            HRIFY offers flexible pricing to ensure you get the best value, whether you’re a startup or a growing enterprise.
+        </div>
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#" onclick="showSection('product', event)">Product</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="showSection('talent', event)">Talent Management</a>
+            </li>
+        </ul>
+
+        <div class="category-nav mt-3" id="category-nav">
+            <button class="active" onclick="changeCategory('payroll')">Payroll & HRMS</button>
+            <button onclick="changeCategory('task')">Task Management</button>
+            <button onclick="changeCategory('hiring')">Hiring</button>
+            <button onclick="changeCategory('booster')">HRIFY Booster</button>
+        </div>
+
+        <div id="product-section">
+            <div class="image-section text-center mt-4">
+                <img id="pricing-image" src="./assets/pricing/payrolland hrms.png" alt="Pricing Table Image">
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <section id="talent-management" class="container mt-4" style="display: none;">
+                <h2 class="text-center">Talent Management</h2>
+                <div class="form-container shadow p-4">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
     
-    <div id="footer"></div>
-    <script src="./scripts/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Business Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" required>
+                            </div>
+                        </div>
+    
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Location</label>
+                                <div class="custom-dropdown">
+                                    <select class="form-select">
+                                        <option>Select Location</option>
+                                        <option>City 1</option>
+                                        <option>City 2</option>
+                                    </select>
+                                    <img src="./assets/pricing/talentformdropdown.png" alt="Dropdown Icon">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">I am Looking for</label>
+                                <div class="custom-dropdown">
+                                    <select class="form-select">
+                                        <option>Select Option</option>
+                                        <option>Contract Staffing and Placement</option>
+                                        <option>Permanent Staffing</option>
+                                        <option>Background Verification</option>
+                                    </select>
+                                    <img src="./assets/pricing/talentformdropdown.png" alt="Dropdown Icon">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="mt-3">
+                            <label class="form-label">Share a quick summary of your requirements!</label>
+                            <textarea class="form-control" rows="4"></textarea>
+                        </div>
+    
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary">Get Quotation</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="responsive-image-section">
+        <img src="./assets/pricing/responsive-image.png" alt="Additional Image" class="img-fluid">
+    </div>
+
+    <script>
+        function changeCategory(category) {
+            let imagePath = "";
+            if (category === 'payroll') {
+                imagePath = "./assets/pricing/payrollandhrms.png";
+            } else if (category === 'task') {
+                imagePath = "./assets/pricing/taskmanagement.png";
+            } else if (category === 'hiring') {
+                imagePath = "./assets/pricing/hiring.png";
+            } else if (category === 'booster') {
+                imagePath = "./assets/pricing/hrifybooster.png";
+            }
+            document.getElementById("pricing-image").src = imagePath;
+
+            document.querySelectorAll('.category-nav button').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function showSection(section, event) {
+            document.querySelectorAll('.nav-tabs .nav-link').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+
+            document.getElementById("product-section").style.display = (section === "product") ? "block" : "none";
+            document.getElementById("talent-management").style.display = (section === "talent") ? "block" : "none";
+            document.getElementById("category-nav").style.display = (section === "product") ? "flex" : "none";
+        }
+    </script>
+    <!-- Footer -->
+<div id="footer"></div>
+
+
+
+
+<script src="./scripts/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script
+
 </body>
 </html>
