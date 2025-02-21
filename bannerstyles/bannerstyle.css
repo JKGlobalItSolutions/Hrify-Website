@@ -1,0 +1,84 @@
+    
+    .banner-container {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .banner-image {
+        width: 100%;
+        display: block;
+    }
+    
+    .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        transform: translateY(-50%);
+        text-align: left;
+        color: white;
+        width: 50%;
+    }
+    
+    .overlay-text h1 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .banner-paragraph {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    
+    .cta-button {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    
+    .cta-button:hover {
+        background-color: #333;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .overlay-text {
+            left: 10%;
+            width: 80%;
+            text-align: left;
+        }
+    
+        .overlay-text h1 {
+            font-size: 1.3rem;
+        }
+    
+        .banner-paragraph {
+            display: none;
+        }
+    
+        .cta-button {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .overlay-text {
+            width: 55%;
+            left: 5%;
+        }
+    
+        .overlay-text h1 {
+            font-size: 10px;
+        }
+    
+        .cta-button {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+    }

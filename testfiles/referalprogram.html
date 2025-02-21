@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referral Program - HRIFY</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        :root {
+            --primary-color: #0081A7;
+            --primary-hover: #006d8f;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .navbar .dropdown-menu {
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .navbar .dropdown-item:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .form-container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 1200px;
+            animation: slideUp 0.5s ease forwards;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-label {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .form-control, .form-select {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 12px 16px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(0, 129, 167, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .submit-btn {
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 50px;
+            padding: 12px 40px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            width: 300px;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/logo/Frame 723.jpg" alt="HRIFY" height="30">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="talentmanagement.html">Talent Management</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Product.html">Product</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Industries.html">Industries</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Careers
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="careers.html">Careers</a></li>
+                            <li><a class="dropdown-item" href="referalprogram.html">Referral Program</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link contact-btn" href="./Contact Us.html">Contact Us</a>
+                    </li>           
+                 </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <section class="banner-section">
+        <div class="container-fluid p-0">
+            <img src="./assets/banner/Referral Banner.png" alt="Referral Banner" class="img-fluid w-100">
+        </div>
+    </section>
+
+
+
+    <section class="contact-section py-5">
+        <div class="container">
+            <h2 class="h3 text-center mb-3 text-primary-light">Spot Great Talent? Refer Them to HRIFY!</h2>
+            <h5 class="text-center mb-3">We’re always looking for talented individuals to join our dynamic team at HRIFY. If you know someone who would thrive in our innovative environment and align with our vision, refer them to us! 
+                Let’s work together to create incredible opportunities.</h5>
+</section>
+
+
+  <!-- IT Field Staffing -->
+  <section class="py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12 col-12">
+                <h2 class="h3 fw-bold mb-4 text-primary-light">HRIFY Candidate Referral Program</h2>
+                <p class="mb-4">Introduce us to exceptional talent! Refer a friend, former colleague, or family member with the right skills to join HRIFY. We are always looking for skilled professionals across diverse fields, including IT and non-IT roles. Our key focus areas include Information Technology, Software Development, Engineering, Human Resources, Marketing, Customer Support, Finance, Legal, and more. Together, let’s build a team that drives innovation and excellence.</p>
+                <h2 class="h3 fw-bold mb-4 text-primary-light">Specialized IT Talent</h2>
+                <p class="mb-4">Access a pool of skilled IT professionals with expertise across various technologies, including software development, networking, cybersecurity, and cloud computing.</p>
+            </div>
+            <div class="col-lg-12 col-12">
+                <p class="mb-4">Successfully referring a candidate can earn you a one-time bonus. Refer to the HRIFY policy below for more details.</p>
+            
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-12 col-12">
+                <h2 class="h3 fw-bold mb-4 text-primary-light">Referral Bonus Policy</h2>
+                <p class="mb-4">HRIFY values your referrals! Earn a referral bonus when the candidate you refer is hired by HRIFY or its clients, subject to the following conditions:</p>
+                <h2 class="h3 fw-bold mb-4 text-primary-light">Eligibility</h2>
+                <p class="mb-4">The referred candidate should not have been in contact with an HRIFY recruiter in the past 3 months.</p>
+                <h2 class="h3 fw-bold mb-4 text-primary-light">Employment Duration</h2>
+                <p class="mb-4">The referred candidate must successfully complete 90 days of active employment before the referral bonus is awarded.</p>
+                <h2 class="h3 fw-bold mb-4 text-primary-light">Policy Updates</h2>
+                <p class="mb-4">HRIFY reserves the right to modify, update, or discontinue this policy at any time.</p>
+                <p class="mb-4">Note: The referral bonus currently applies only to candidates and referrers within the North America region. However, we encourage you to refer talented professionals from any location, as we are always eager to connect with exceptional individuals.</p>
+    
+            </div>
+           
+        </div>
+        <div class="col-lg-12 col-12">
+            <p class="mb-4">Let’s work together to build a stronger, more talented team!</p>
+        
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Referral Form Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="form-container">
+                <h2 class="text-center mb-4">Referral Program</h2>
+                <form>
+                    <div class="row g-4">
+                        <!-- Your Details Section -->
+                        <div class="col-12">
+                            <h4 class="section-title">Your Details</h4>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" required>
+                        </div>
+
+                        <!-- Candidate Details Section -->
+                        <div class="col-12">
+                            <h4 class="section-title">Candidate Details</h4>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Current Job Title</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Relevant Skills/Expertise</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Preferred Role/Department</label>
+                            <select class="form-select" required>
+                                <option value="" selected disabled>Select Department</option>
+                                <option>IT</option>
+                                <option>HR</option>
+                                <option>Marketing</option>
+                                <option>Engineering</option>
+                                <option>Legal</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">How do you know this candidate?</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Any comments or notes about the candidate</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Upload Resume</label>
+                            <a href="https://forms.google.com/your-form-link" target="_blank" 
+                               class="btn btn-outline-primary d-block">Upload via Google Form</a>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" required id="confirmCheck">
+                                <label class="form-check-label" for="confirmCheck">
+                                    I confirm that the information provided is accurate and that I have obtained the candidate's consent to share their details with HRIFY.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="submit-btn">Submit Referral</button>
+                            <p class="text-muted mt-3">
+                                Thank you for your referral! We will review the candidate's details and get in touch if there's a suitable opportunity. Stay tuned for updates!
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+<footer class="py-5" style="background-color: #1E1E1E;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5 class="text-white mb-4">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Home</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Services</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Talent Management</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Product</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Industries</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Insights</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">About</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Careers</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5 class="text-white mb-4">IT Services & Consulting</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Software Development</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Web Development</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">App Development</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">System Integration</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Networking Solutions</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5 class="text-white mb-4">Talent Management</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Contract Staffing and Placement</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Contract to Hire</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Permanent Staffing</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Supplier Rationalization</a></li>
+                    <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Hire, Train & Deploy</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center text-lg-end">
+                <img src="./assets/logo/Frame 723.jpg" alt="HRIFY" class="img-fluid mb-4" style="max-width: 200px;">
+                <a href="#" class="btn btn-primary d-inline-block mb-4 w-80 px-4 py-2" style="background-color: #008B9B; border: none; border-radius: 30px;">
+                    Download Broacher
+                </a>
+              <!-- Social Media Icons Section -->
+<div class="d-flex justify-content-center justify-content-lg-end gap-3 mt-4">
+    <a href="https://facebook.com" target="_blank" class="text-white bg-primary rounded-circle d-flex align-items-center justify-content-center"
+        style="width: 40px; height: 40px; background-color: #008B9B !important;text-decoration: none">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://whatsapp.com" target="_blank" class="text-white bg-primary rounded-circle d-flex align-items-center justify-content-center"
+        style="width: 40px; height: 40px; background-color: #008B9B !important;text-decoration: none">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://twitter.com" target="_blank" class="text-white bg-primary rounded-circle d-flex align-items-center justify-content-center"
+        style="width: 40px; height: 40px; background-color: #008B9B !important;text-decoration: none">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://linkedin.com" target="_blank" class="text-white bg-primary rounded-circle d-flex align-items-center justify-content-center"
+        style="width: 40px; height: 40px; background-color: #008B9B !important;text-decoration: none">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://instagram.com" target="_blank" class="text-white bg-primary rounded-circle d-flex align-items-center justify-content-center"
+        style="width: 40px; height: 40px; background-color: #008B9B !important; text-decoration: none;">
+        <i class="fab fa-instagram"></i>
+    </a>
+</div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="./scripts/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+
+</body>
+</html>
