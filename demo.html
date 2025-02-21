@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRIFY</title>
+    <link rel="icon" href="./Images/logos/hrify fevicon.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+        integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-link {
+            color: #333;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+        }
+
+        .nav-link:hover {
+            color: red;
+        }
+
+        .btn-demo,
+        .btn-signup {
+            background-color: #FF0000;
+            color: white;
+            border-radius: 25px;
+            padding: 8px 24px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-demo {
+            margin-right: 10px;
+        }
+
+        .btn-demo:hover,
+        .btn-signup:hover {
+            background-color: #E60000;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to top, #FF0000 0%, #990000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .background-gradient {
+            background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(153, 0, 0, 1) 100%);
+        }
+
+        .footer-text {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .footer-text:hover {
+            color: red !important;
+            cursor: pointer;
+        }
+
+        .social-icon {
+            transition: filter 0.3s ease;
+        }
+
+        .social-icon:hover {
+            filter: brightness(1.2);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.7s ease, transform 2.7s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-nav {
+                padding: 1rem 0;
+            }
+
+            .nav-button-group {
+                margin-top: 1rem;
+                display: flex;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                height: 50px !important;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .nav-item.dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+        }
+
+        .nav-item-hover:hover {
+            color: #FF0000 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img style="height: 70px;" src="./Images/logos/Hrify Logo (2).png" alt="HRIFY Logo" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-item-hover" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 18px;">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="HrifyWeb.html">HRIFY Web Software</a></li>
+                            <li><a class="dropdown-item" href="HrifyMobile.html">HRIFY Mobile App</a></li>
+                            <li><a class="dropdown-item" href="HrifyBooster.html">HRIFY Booster</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-item-hover" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 18px;">
+                            Solutions
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="GlobalPayroll.html">Global Payroll Management</a></li>
+                            <li><a class="dropdown-item" href="StaffingSolutions.html">Staffing Solutions</a></li>
+                        
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="pricing.html">Pricing</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="clients.html">Clients</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="carrer.html">Career</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px; " class="nav-link nav-item-hover" href="channelpartner.html">Channel
+                            Partner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover"
+                            href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-button-group">
+                    <a style="background-color: black;" href="demo.html" class="btn btn-demo">Demo</a>
+                    <a target="_blank" href="https://hrms-web-app.web.app/" class="btn btn-signup">Sign Up</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container justify-content-center fade-in my-4 ">
+        <div class="row">
+            <div class="col text-center">
+                <h3 class="" >
+                    Experience
+                <img class="col-1" src="./Images/logos/hrify pricing logo.png" alt=""> Streamline Your HR Management
+                </h3>
+                <p >"Schedule a live demo and discover how HRIFY simplifies HR operations for businesses like yours."</p>
+            </div>
+        </div>
+    </div>
+
+    <form class="demo-form fade-in">
+        <h2 class="form-title">Demo Request<span class="asterisk">*</span></h2>
+        
+        <div class="form-grid">
+          <input type="text" placeholder="Full Name" required class="form-input">
+          <input type="email" placeholder="Email Address" required class="form-input">
+          
+          <input type="tel" placeholder="Phone Number" required class="form-input">
+          <input type="text" placeholder="Company Name" required class="form-input">
+          
+          <input type="number" placeholder="Number of Employees" required class="form-input">
+          <input type="datetime-local" placeholder="Preferred Demo Date/Time" required class="form-input">
+          
+          <select class="form-input form-select" required>
+            <option value="" disabled selected>Purpose of demo</option>
+            <option value="payroll">Payroll Management</option>
+            <option value="attendance">Attendance Tracking</option>
+            <option value="hrms">Full HRMS Overview</option>
+          </select>
+        </div>
+        
+        <button type="submit" class="submit-button">Book Your Free Demo Today</button>
+      </form>
+      
+      <style>
+      .demo-form {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      
+      .form-title {
+        color: #ff0000;
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+      
+      .asterisk {
+        color: #ff0000;
+        margin-left: 4px;
+      }
+      
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+      
+      .form-select {
+        grid-column: 1 / -1;
+      }
+      
+      .form-input {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #ff0000;
+        border-radius: 4px;
+        font-size: 16px;
+        outline: none;
+        background: white;
+      }
+      
+      .form-input::placeholder {
+        color: #999;
+      }
+      
+      .submit-button {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        background-color: #ff0000;
+        color: white;
+        border: none;
+        padding: 15px 40px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      
+      .submit-button:hover {
+        background-color: #e60000;
+      }
+      
+      @media (max-width: 768px) {
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+        
+        .form-select {
+          grid-column: auto;
+        }
+      }
+      </style>
+
+
+
+
+
+
+
+
+    <footer class="p-5" style="background-color: black;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <h5 class="text-gradient fw-bolder">Explore More</h5>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Home</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Product</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Careers</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Channel Partner</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Blog</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Contact Us</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Pricing</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Clients</p>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h5 class="text-gradient fw-bolder">Our Services</h5>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Employee Management</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Attendance Tracking</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Leave Management</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Department Structuring</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payroll Processing</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payslip Generation</p>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h5 class="text-gradient fw-bolder">Why Choose HRIFY?</h5>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">User-Friendly Design</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Customer Support</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Attendance Tracking</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Leave Management</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Request a Demo</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Department Structuring</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payroll Processing</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payslip Generation</p>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-3 justify-content-center text-center">
+                    <img class="img-fluid" src="./Images/logos/footer logo.png" alt="HRIFY logo">
+                    <h5 style="cursor: pointer;" class="background-gradient text-center mt-3 py-2 rounded text-light">
+                        Download Brochure</h5>
+                    <p class="footer-text"><i class="fa-regular fa-envelope"></i>&nbsp; support@hrify.in</p>
+                    <p class="footer-text"><i class="fa-solid fa-phone"></i>&nbsp; 8807880764</p>
+                    <div class="d-flex gap-3 justify-content-center">
+                        <img class="img-fluid social-icon" src="./Images/logos/facebook.png" alt="Facebook">
+                        <img class="img-fluid social-icon" src="./Images/logos/Youtube.png" alt="YouTube">
+                        <img class="img-fluid social-icon" src="./Images/logos/x icon.png" alt="Twitter">
+                        <img class="img-fluid social-icon" src="./Images/logos/linkedin.png" alt="LinkedIn">
+                        <img class="img-fluid social-icon" src="./Images/logos/instagram.png" alt="Instagram">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.fade-in').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+
+</html>

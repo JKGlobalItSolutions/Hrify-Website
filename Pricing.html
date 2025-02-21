@@ -1,30 +1,609 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HRIFY Technologies</title>
-    <link rel="icon" type="image/png" href="./assets/logo/favicon/favicon.png" sizes="16x16">
+    <title>HRIFY</title>
+    <link rel="icon" href="./Images/logos/hrify fevicon.jpg" type="image/x-icon">
 
-    <link rel="icon" type="image/png" href="./assets/logo/favicon/favicon.png" sizes="16x16">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTxTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/style.css">
-    <script src="./components/includescript.js"></script>
+    <style>
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+        }
 
- 
-    
-    </script>
+        .nav-link {
+            color: #333;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+        }
+
+        .nav-link:hover {
+            color: red;
+        }
+
+        .btn-demo, .btn-signup {
+            background-color: #FF0000;
+            color: white;
+            border-radius: 25px;
+            padding: 8px 24px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-demo {
+            margin-right: 10px;
+        }
+
+        .btn-demo:hover, .btn-signup:hover {
+            background-color: #E60000;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to top, #FF0000 0%, #990000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .background-gradient {
+            background: linear-gradient(90deg, rgba(255, 0, 0, 1) 0%, rgba(153, 0, 0, 1) 100%);
+        }
+
+        .footer-text {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .footer-text:hover {
+            color: red !important;
+            cursor: pointer;
+        }
+
+        .social-icon {
+            transition: filter 0.3s ease;
+        }
+
+        .social-icon:hover {
+            filter: brightness(1.2);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1.7s ease, transform 2.7s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-nav {
+                padding: 1rem 0;
+            }
+
+            .nav-button-group {
+                margin-top: 1rem;
+                display: flex;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                height: 50px !important;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .nav-item.dropdown:hover .dropdown-menu {
+                display: block;
+                margin-top: 0;
+            }
+        }
+
+        .nav-item-hover:hover {
+            color: #FF0000 !important;
+        }
+
+        .bg-custom-red { background-color: #FF0000; }
+        .bg-custom-yellow { background-color: #FFFF00; }
+        .text-custom-red { color: #FF0000; }
+        .border-custom-red { border-color: #FF0000 !important; }
+        .plan-icon { font-size: 2rem; }
+        .check-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #FF0000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img style="height: 70px;" src="./Images/logos/Hrify Logo (2).png" alt="HRIFY Logo" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-item-hover" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 18px;">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="HrifyWeb.html">HRIFY Web Software</a></li>
+                            <li><a class="dropdown-item" href="HrifyMobile.html">HRIFY Mobile App</a></li>
+                            <li><a class="dropdown-item" href="HrifyBooster.html">HRIFY Booster</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-item-hover" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 18px;">
+                            Solutions
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="GlobalPayroll.html">Global Payroll Management</a></li>
+                            <li><a class="dropdown-item" href="StaffingSolutions.html">Staffing Solutions</a></li>
+                        
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;color: red;" class="nav-link nav-item-hover" href="pricing.html">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="carrer.html">Career</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="channelpartner.html">Channel Partner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-button-group">
+                    <a href="demo.html" class="btn btn-demo">Demo</a>
+                    <a target="_blank" href="https://hrms-web-app.web.app/" class="btn btn-signup">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
+    <div class="container justify-content-center fade-in">
+        <div class="row">
+            <div class="col-12 text-center d-flex justify-content-center align-items-center ">
+                <img style="height: 50px;" src="./Images/logos/hrify pricing logo.png" alt="">
+                <h1 class="mx-1">Pricing</h1>
+            </div>
+            <div class="col-12 mt-3">
+                <h6 class="text-center fs-6 ">Choose the plan that suits your business needs. HRIFY offers flexible pricing to ensure that you get the best value for your HR management solution, whether you're a small startup or a growing enterprise</h6>
+            </div>
+        </div>
+    </div>
 
-    <div id="navbar-container"></div>
+    <!-- <div class="container py-5">
+        <div class="row g-0 border border-2 border-custom-red rounded overflow-hidden">
+            <div class="col-12 col-md-3 bg-custom-red text-white p-4">
+               <div  style="background-color: #990000;" class="py-5 px-2 rounded">
+                <h2 class="fs-2 fw-bold text-center ">Dashboard</h2>
+                <h3 class="fs-4 text-center ">Features</h3>
+               </div>
+            </div>
+            
+            <div class="col-12 col-md-3 bg-white p-3 text-center border-bottom border-2 border-custom-red">
+                <div class="plan-icon">⚪</div>
+                <h3 class="fs-3 fw-bold">Silver</h3>
+                <p class="bg-dark text-white p-3 rounded small">Web Software</p>
+            </div>
+            <div class="col-12 col-md-3 bg-white p-3 text-center border-bottom border-2 border-custom-red">
+                <div class="plan-icon">🟡</div>
+                <h3 class="fs-3 fw-bold">Gold</h3>
+                <p class="bg-dark text-white p-3 rounded small">Application</p>
+            </div>
+            <div class="col-12 col-md-3 bg-white p-3 text-center border-bottom border-2 border-custom-red">
+                <div class="plan-icon">⚫</div>
+                <h3 class="fs-3 fw-bold">Platinum</h3>
+                <p class="bg-dark text-white p-3 rounded small">Web Software + Application</p>
+            </div>
 
-    
-    <div id="footer"></div>
-    <script src="./scripts/script.js"></script>
+            <div class="col-12 bg-custom-yellow p-2 text-custom-red fw-bold">Employee Management</div>
+            <div class="col-12 col-md-3 p-3 border-end border-2 border-custom-red">
+                <ul class="list-unstyled">
+                    <li>• Data Management</li>
+                    <li>• Accounts Details</li>
+                    <li>• Document Upload</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 d-flex align-items-center justify-content-center p-3 border-end border-2 border-custom-red">
+                <div class="check-icon">✓</div>
+            </div>
+            <div class="col-12 col-md-3 d-flex align-items-center justify-content-center p-3 border-end border-2 border-custom-red">
+                <div class="check-icon">✓</div>
+            </div>
+            <div class="col-12 col-md-3 d-flex align-items-center justify-content-center p-3">
+                <div class="check-icon">✓</div>
+            </div>
+
+            <div class="col-12 bg-custom-yellow p-2 text-custom-red fw-bold">Attendance Management</div>
+            <div class="col-12 col-md-3 p-3 border-end border-2 border-custom-red">
+                <ul class="list-unstyled">
+                    <li>• Daily Attendance Processing</li>
+                    <li>• Employee Time Checker</li>
+                    <li>• Customized Employee Data</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 d-flex align-items-center justify-content-center p-3 border-end border-2 border-custom-red">
+                <div class="check-icon">✓</div>
+            </div>
+            <div class="col-12 col-md-3 d-flex align-items-center justify-content-center p-3 border-end border-2 border-custom-red">
+                <div class="check-icon">✓</div>
+            </div>
+            <div class="col-12 col-md-3 d-flex align-items-center justify-content-center p-3">
+                <div class="check-icon">✓</div>
+            </div>
+
+            <div class="col-12 bg-custom-yellow p-2 text-custom-red fw-bold">Leave Management</div>
+            <div class="col-12 col-md-3 p-3 border-end border-2 border-custom-red">
+                <ul class="list-unstyled">
+                    <li>• Employee Leave Request</li>
+                    <li>• Employee Leave Management</li>
+                    <li>• Admin Leave Approvals</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 d-flex align-items-center justify-content-center p-3 border-end border-2 border-custom-red">
+                <div class="check-icon">✓</div>
+            </div>
+            <div class="col-12 col-md-3 d-flex align-items-center justify-content-center p-3 border-end border-2 border-custom-red">
+                <div class="check-icon">✓</div>
+            </div>
+            <div class="col-12 col-md-3 d-flex align-items-center justify-content-center p-3">
+                <div class="check-icon">✓</div>
+            </div>
+
+            <div class="col-12 bg-custom-yellow p-2 text-custom-red fw-bold">Department</div>
+            <div class="col-12 col-md-3 p-3 border-end border-2 border-custom-red">
+                <ul class="list-unstyled">
+                    <li>• Employee's Job Role</li>
+                    <li>• Overall Employee's Detail</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 d-flex align-items-center justify-content-center p-3 border-end border-2 border-custom-red">
+                <div class="check-icon">✓</div>
+            </div>
+            <div class="col-12 col-md-3 d-flex align-items-center justify-content-center p-3 border-end border-2 border-custom-red">
+                <div class="check-icon">✓</div>
+            </div>
+            <div class="col-12 col-md-3 d-flex align-items-center justify-content-center p-3">
+                <div class="check-icon">✓</div>
+            </div>
+            <div class="col-12 bg-custom-yellow p-2 text-custom-red fw-bold">Payroll Management</div>
+            <div class="col-12 col-md-3 p-3 border-end border-2 border-custom-red">
+                <ul class="list-unstyled">
+                    <li>• Employee Salary Details</li>
+                    <li>• Payslip</li>
+                    <li>• Overall Data Management</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 d-flex align-items-center justify-content-center p-3 border-end border-2 border-custom-red">
+                <div class="check-icon">✓</div>
+            </div>
+            <div class="col-12 col-md-3 d-flex align-items-center justify-content-center p-3 border-end border-2 border-custom-red">
+                <div class="check-icon">✓</div>
+            </div>
+            <div class="col-12 col-md-3 d-flex align-items-center justify-content-center p-3">
+                <div class="check-icon">✓</div>
+            </div>
+
+         
+            <div class="col-12 bg-custom-red p-3">
+                <div class="row g-2">
+                    <div class="col-md-3"></div>
+                    <div class="col-12 col-md-3">
+                        <button class="btn btn-warning w-100 fw-bold get-quotation" data-plan="Silver">Get Quotation</button>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <button class="btn btn-warning w-100 fw-bold get-quotation" data-plan="Gold">Get Quotation</button>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <button class="btn btn-warning w-100 fw-bold get-quotation" data-plan="Platinum">Get Quotation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container justify-content-center text-center mt-3 mb-2 fade-in">
+        <img class="img-fluid col-lg-8 col-12" src="./Images/Pricing/pricing banner 1.png" alt="">
+    </div>
+
+    <div class="container justify-content-center text-center my-3 fade-in">
+        <img class=" get-quotation img-fluid col-12 col-lg-6" src="./Images/Pricing/Hrify Pricing Image 5.png" alt="">
+    </div>
+
+  
+
+    <div class="container my-5 fade-in">
+        <div class="container justify-content-center ">
+            <div class="row">
+                <div class="col-12 text-center d-flex justify-content-center align-items-center ">
+                    <img style="height: 50px;" src="./Images/Pricing/Hrify Pricing image 3.png" alt="">
+                    <h1 class="mx-1">Pricing</h1>
+                </div>
+                <div class="col-12 mt-3">
+                    <h6 class="text-center fs-6 ">"Select the plan that fits your business requirements. HRIFY BOOSTER offers flexible pricing to provide the best value for your HR management needs, whether you're a growing startup or an established enterprise."</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="container justify-content-center text-center mt-3 mb-2 fade-in">
+            <img class="img-fluid col-lg-8 col-12" src="./Images/Pricing/Hrify Pricing Image 4.jpg" alt="">
+        </div>
+
+        <div class="container justify-content-center text-center my-3 fade-in">
+            <img  class=" get-quotation img-fluid col-12 col-lg-6" src="./Images/Pricing/Hrify Pricing Image 5.png" alt="">
+        </div>
+    </div>
+
+    <footer class="p-5" style="background-color: black;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <h5 class="text-gradient fw-bolder">Explore More</h5>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Home</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Product</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Careers</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Channel Partner</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Blog</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Contact Us</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Pricing</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Clients</p>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h5 class="text-gradient fw-bolder">Our Services</h5>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Employee Management</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Attendance Tracking</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Leave Management</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Department Structuring</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payroll Processing</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payslip Generation</p>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h5 class="text-gradient fw-bolder">Why Choose HRIFY?</h5>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">User-Friendly Design</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Customer Support</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Attendance Tracking</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Leave Management</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Request a Demo</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Department Structuring</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payroll Processing</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payslip Generation</p>
+                    </a>
+                </div>
+                <div class="col-12 col-lg-3 justify-content-center text-center">
+                    <img class="img-fluid" src="./Images/logos/footer logo.png" alt="HRIFY logo">
+                    <h5 style="cursor: pointer;" class="background-gradient text-center mt-3 py-2 rounded text-light">Download Brochure</h5>
+                    <p class="footer-text"><i class="fa-regular fa-envelope"></i>&nbsp; support@hrify.in</p>
+                    <p class="footer-text"><i class="fa-solid fa-phone"></i>&nbsp; 8807880764</p>
+                    <div class="d-flex gap-3 justify-content-center">
+                        <img class="img-fluid social-icon" src="./Images/logos/facebook.png" alt="Facebook">
+                        <img class="img-fluid social-icon" src="./Images/logos/Youtube.png" alt="YouTube">
+                        <img class="img-fluid social-icon" src="./Images/logos/x icon.png" alt="Twitter">
+                        <img class="img-fluid social-icon" src="./Images/logos/linkedin.png" alt="LinkedIn">
+                        <img class="img-fluid social-icon" src="./Images/logos/instagram.png" alt="Instagram">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="quotationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="text-3xl font-bold text-red-600 text-center">Get Your Custom Quote Today!</h2>
+            <p class="text-center text-lg mb-4">Tailored HR solutions for your business, just a few steps away. Fill out the form to receive your personalized quote and start optimizing your HR operations!</p>
+            <form id="quotationForm">
+                <input type="hidden" id="selectedPlan" name="selectedPlan">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="company" name="company" placeholder="Enter your company's name" required>
+                </div>
+                <div class="mb-3">
+                    <select class="form-select" id="industry" name="industry" required>
+                        <option value="" disabled selected>Select your industry</option>
+                        <option value="technology">Technology</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="retail">Retail</option>
+                        <option value="manufacturing">Manufacturing</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <select class="form-select" id="employees" name="employees" required>
+                        <option value="" disabled selected>How many employees will use the platform?</option>
+                        <option value="1-10">1-10 employees</option>
+                        <option value="11-50">11-50 employees</option>
+                        <option value="51-200">51-200 employees</option>
+                        <option value="201-500">201-500 employees</option>
+                        <option value="500+">500+ employees</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Full Name" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="mb-3">
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" id="features" name="features" rows="3" placeholder="What features would you like in your HR solution?" required></textarea>
+                </div>
+                <p class="text-sm text-center text-red-600 mb-3">Your information will only be used to provide you with a personalized quote. We respect your privacy and will never share your details with third parties without your consent.</p>
+                <button type="submit" class="btn btn-danger w-100">Get My Custom Quote</button>
+            </form>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.fade-in').forEach(element => {
+                observer.observe(element);
+            });
+
+            // Modal functionality
+            const modal = document.getElementById("quotationModal");
+            const btns = document.getElementsByClassName("get-quotation");
+            const span = document.getElementsByClassName("close")[0];
+            const form = document.getElementById("quotationForm");
+            const selectedPlanInput = document.getElementById("selectedPlan");
+
+            // Open modal when "Get Quotation" buttons are clicked
+            for (let i = 0; i < btns.length; i++) {
+                btns[i].onclick = function() {
+                    modal.style.display = "block";
+                    selectedPlanInput.value = this.getAttribute('data-plan');
+                }
+            }
+
+            // Close modal when (x) is clicked
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // Close modal when clicking outside of it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            // Form submission
+            form.onsubmit = function(e) {
+                e.preventDefault();
+                // Handle form submission here
+                console.log("Form submitted");
+                // You can add AJAX call here to submit the form data
+                modal.style.display = "none";
+                alert("Thank you for your interest! We'll get back to you with a custom quote soon.");
+            }
+        });
+    </script>
 </body>
+
 </html>

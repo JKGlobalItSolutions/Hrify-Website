@@ -112,17 +112,17 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item active">
-                        <a style="font-size: 18px; color: red;" class="nav-link nav-item-hover" href="index.html">Home</a>
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle nav-item-hover" href="#" id="navbarDropdownMenuLink"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 18px;">
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 18px;color: red;">
                             Product
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="HrifyWeb.html">HRIFY Web Software</a></li>
                             <li><a class="dropdown-item" href="HrifyMobile.html">HRIFY Mobile App</a></li>
-                            <li><a class="dropdown-item" href="HrifyBooster.html">HRIFY Booster</a></li>
+                            <li><a style="color: red;" class="dropdown-item" href="HrifyBooster.html">HRIFY Booster</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -165,148 +165,20 @@
             </div>
         </div>
     </nav>
-    <!-- Banner start -->
-    <style>
-        .slider {
-            position: relative;
-            width: 100%;
-            overflow: hidden;
-        }
-
-        .slides {
-            display: flex;
-            transition: transform 1s ease-in-out;
-        }
-
-        .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
-
-        .slide img {
-            width: 100%;
-            display: block;
-        }
-
-        .dot-navigation {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-        }
-
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.5);
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .dot.active {
-            background-color: #ffffff;
-            padding: 8px;
-        }
-    </style>
-    <div class="slider">
-        <div class="slides">
-            <!-- Duplicate slides to create seamless scrolling -->
-            <div class="slide"><img src="./Images/Home-Images/Banner 1 (2).png" alt="Slide 1"></div>
-            <div class="slide"><img src="./Images/Home-Images/Banner 2.png" alt="Slide 2"></div>
-            <!-- <div class="slide"><img src="./images/Home-Images/Banner 3.png" alt="Slide 3"></div> -->
-            <div class="slide"><img src="./Images/Home-Images/Banner 4.png" alt="Slide 4"></div>
-            <!-- <div class="slide"><img src="./images/Home-Images/Banner 5 (1).png" alt="Slide 5"></div> -->
-
-            <!-- Duplicate slides again -->
-            <div class="slide"><img src="./Images/Home-Images/Banner 1 (2).png" alt="Slide 1"></div>
-            <div class="slide"><img src="./Images/Home-Images/Banner 2.png" alt="Slide 2"></div>
-            <!-- <div class="slide"><img src="./images/Home-Images/Banner 3.png" alt="Slide 3"></div> -->
-            <div class="slide"><img src="./Images/Home-Images/Banner 4.png" alt="Slide 4"></div>
-            <!-- <div class="slide"><img src="./images/Home-Images/Banner 5 (1).png" alt="Slide 5"></div> -->
-        </div>
-        <a href=""></a>
-        <div class="dot-navigation align-items-center">
-            <button class="dot active" aria-label="Go to slide 1"></button>
-            <button class="dot" aria-label="Go to slide 2"></button>
-            <!-- <button class="dot" aria-label="Go to slide 3"></button> -->
-            <button class="dot" aria-label="Go to slide 4"></button>
-            <!-- <button class="dot" aria-label="Go to slide 5"></button> -->
-        </div>
-    </div>
-
-    <script>
-        const slides = document.querySelector('.slides');
-        const slideCount = document.querySelectorAll('.slide').length;
-        const slideWidth = 100; // Assuming each slide takes 100% width
-        let currentIndex = 0;
-        let slideInterval;
-        const dots = document.querySelectorAll('.dot');
-
-        function goToSlide(index) {
-            slides.style.transition = 'transform 0.5s ease';
-            slides.style.transform = `translateX(-${index * slideWidth}%)`;
-            currentIndex = index;
-            updateDots();
-
-            // When reaching the cloned slides, jump back to the start
-            if (index >= slideCount / 2) {
-                setTimeout(() => {
-                    slides.style.transition = 'none';
-                    slides.style.transform = 'translateX(0)';
-                    currentIndex = 0;
-                    updateDots();
-                }, 500); // Match this delay to the transition time
-            }
-        }
-
-        function updateDots() {
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentIndex % (slideCount / 2));
-            });
-        }
-
-        function nextSlide() {
-            goToSlide(currentIndex + 1);
-        }
-
-        function startSlideShow() {
-            slideInterval = setInterval(nextSlide, 6000); // Change slides every 6 seconds
-        }
-
-        function stopSlideShow() {
-            clearInterval(slideInterval);
-        }
-
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                goToSlide(index);
-                stopSlideShow();
-                startSlideShow();
-            });
-        });
-
-        startSlideShow();
-    </script>
-    <!-- Banner end -->
+  
 
 
-    <div class="container mt-5">
+    <div class="container">
         <div class="row align-items-center">
             <div class="col-12 col-lg-8 animate-left">
-                <h3 class="text-gradient">"Streamline HR Operations with HRIFY-Your All-in-One Solution"</h3>
-                <p>HRIFY is a comprehensive and intuitive HR management software, designed to simplify and automate
-                    essential HR tasks from managing employee records to tracking attendance, processing payroll, and
-                    organizing departments. HRIFY provides all the tools your team needs on a single, secure platform.
-                    With an easy-to-use interface and powerful features, HRIFY empowers HR teams to streamline
-                    operations, boost productivity and enhance employee engagement. By using HRIFY, your HR operations
-                    become more efficient, compliant, and aligned with your company's growth objectives.</p>
+                <h3 class="">“Streamline HR, Payroll Management and  Mini  CRM with <span class="text-gradient">HRIFY BOOSTER</span> Empowering Employees 
+                    and Admins with Seamless Access”</h3>
+                <p>“Experience the power of two dedicated portals for employees and admins, all in one integrated platform. Simplify attendance tracking, leave management, payroll, and more.”</p>
+            <button class="background-gradient col-12 col-lg-4 text-light py-2 rounded fw-bolder" style="border: none; ">Try HRIFY BOOSTER Today</button>
+
             </div>
-            <div class="col-12 col-lg-4 animate-right">
-                <img class="img-fluid" src="./Images/Home-Images/home image 1.png" alt="HRIFY">
+            <div class="col-12 col-lg-4 animate-right mt-2">
+                <img class="img-fluid" src="./Images/HrifyBooster/hrify booster image 1.png" alt="HRIFY">
             </div>
         </div>
     </div>
@@ -368,94 +240,47 @@
         document.addEventListener('DOMContentLoaded', setupAnimations);
         window.addEventListener('resize', setupAnimations);
     </script>
-    <div class="container mt-5 d-none d-lg-block">
-        <div class="row text-center justify-content-center mb-5">
-            <h4 class="background-gradient  col-lg-8 text-center py-2 text-light rounded">Our Best Features for
-                Comprehensive Employee Data and Management</h4>
-        </div>
-    </div>
-    <div class="container mt-5 col-11 d-lg-none">
-        <div class="row text-center justify-content-center mb-5">
-            <h4 class="background-gradient  col-lg-8 text-center py-2 text-light rounded">Our Best Features for
-                Comprehensive Employee Data and Management</h4>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-12 col-lg-4 mb-4">
-                <div style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;"
-                    class="px-4 py-3 d-flex align-items-center hover-effect">
-                    <img style="height: 60px;" class="img-fluid" src="./Images/Home-Images/Data Management Image.png"
-                        alt="">
-                    <p class="fw-bolder mb-0 ms-3">Data Management</p>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4 mb-4">
-                <div style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;"
-                    class="px-4 py-3 d-flex align-items-center hover-effect">
-                    <img style="height: 60px;" class="img-fluid" src="./Images/Home-Images/Employee Details.png" alt="">
-                    <p class="fw-bolder mb-0 ms-3">Customized Employee
-                        Details</p>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4 mb-4">
-                <div style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;"
-                    class="px-4 py-3 d-flex align-items-center hover-effect">
-                    <img style="height: 60px;" class="img-fluid" src="./Images/Home-Images/Data Management Image.png"
-                        alt="">
-                    <p class="fw-bolder mb-0 ms-3">Admin Leave Approval</p>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4 ">
-                <div style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;"
-                    class="px-4 py-3 d-flex align-items-center hover-effect">
-                    <img style="height: 60px;" class="img-fluid" src="./Images/Home-Images/Overall Employee Details.png"
-                        alt="">
-                    <p class="fw-bolder mb-0 ms-3">Overall Employee
-                        Details</p>
-                </div>
-            </div>
-            <div class="col-12 col-lg-4 mt-4 mt-lg-0">
-                <div style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;"
-                    class="px-4 py-3 d-flex align-items-center hover-effect">
-                    <img style="height: 60px;" class="img-fluid" src="./Images/Home-Images/Employee Salary Details.png"
-                        alt="">
-                    <p class="fw-bolder mb-0 ms-3">Employee Salary
-                        Details</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <style>
-        /* Hover styles for the columns */
-        .hover-effect:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        }
-    </style>
+
 
     <div class="container my-4">
         <div class="row align-items-center">
             <div class="col-lg-8 animate-left">
-                <h2 class="text-gradient fw-bolder">Employee Management</h2>
-                <p>HRIFY provides a streamlined system for managing all personnel information, roles, and performance
-                    indicators from one secure site. This maintains employee data structured and accessible, allowing
-                    for smooth collaboration within teams.</p>
+                <h2 class="text-gradient fw-bolder">HRIFY BOOSTER Employee App & Web Software</h2>
+                <p>The HRIFY BOOSTER Employee Portal is designed to provide your employees with easy, real-time access to their HR essentials. Whether on the go or at their desks, employees can manage their attendance, view payroll details, submit leave requests, and track performance—all from a secure and intuitive interface. The Employee Portal makes HR tasks simple, transparent, and efficient, giving employees more control over their work-life balance.</p>
                 <div>
                     <div class="d-flex align-items-center">
                         <p><i style="color: red;" class="fa-solid fa-circle"></i> <span
-                                style="color: #FF0000;">Centralized Employee Profiles:</span> Easily access all employee
-                            details in one view.</p>
+                                style="color: #FF0000;">User-Friendly Dashboard: </span>
+                                The Employee Portal features a clean, intuitive dashboard where employees can easily navigate to their attendance, leave, payroll, and other key HR information. Employees can quickly find and manage their data without confusion.</p>
                     </div>
                     <div class="d-flex align-items-center">
-                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Role &
-                                Performance Tracking:</span> Monitor roles, responsibilities and performance with ease.
+                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Lead & Follow-Up Management:</span> Manage potential candidates, track lead progress, and schedule follow-ups from a single interface. Keeps track of recruitment leads and helps optimize the hiring process by ensuring timely follow-ups.
                         </p>
                     </div>
                     <div class="d-flex align-items-center">
-                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Data
-                                Security:</span> Safeguard sensitive information with advanced security measures.</p>
+                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Real-Time Attendance Tracking: </span>Employees can clock in/out, track their work hours, and monitor overtime in real-time via the app or web portal. Ensures accurate work hour tracking and minimizes payroll discrepancies.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Leave Management:</span>
+                            Employees can view their leave balance, submit leave requests, and track the status of requests (approved, pending, or rejected). Employees have full visibility and control over their leave, reducing administrative workload.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Payroll & Payslips Access:</span>
+                            Payroll & Payslips Access
+                            Employees can securely access their payslips, salary breakdowns, and tax information anytime. Promotes transparency and empowers employees to manage their financial details on their own.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Performance & Attendance Reports:</span>
+                            View personal attendance records, late entries, and performance reviews in one easy-to-read format. Employees stay informed about their performance and can take proactive steps to improve.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Push Notifications & Alerts:</span>
+                            Receive real-time notifications about payroll updates, leave status, attendance records, and important announcements. Keeps employees informed and up-to-date, minimizing communication gaps.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Mobile & Web Access:</span>
+                            Mobile & Web Access
+                            Accessible on both mobile apps (Android/iOS) and desktop web browsers, ensuring employees can access HR data wherever they are. Flexibility to access HR essentials on the go or at the desk.</p>
                     </div>
                 </div>
             </div>
@@ -467,28 +292,23 @@
 
     <div class="container my-4">
         <div class="row align-items-center">
-            <div class="col-lg-4 animate-left d-none d-lg-block">
-                <img class="img-fluid" src="./Images/Home-Images/home image 3.png" alt="Attendance Management">
+            <div class="col-lg-5 animate-left d-none d-lg-block">
+                <img class="img-fluid" src="./Images/HrifyBooster/hrify booster image 2.png" alt="Attendance Management">
             </div>
-            <div class="col-lg-8 animate-right">
-                <h2 class="text-gradient fw-bolder">Attendance Management</h2>
-                <p>HRIFY offers an intuitive attendance tracking system that logs work hours, accommodates shift
-                    changes, and generates detailed reports, helping organizations maintain accurate attendance records.
-                </p>
+            <div class="col-lg-7 animate-right">
+                <h2 class=" background-gradient text-light col-12 col-lg-6 text-center py-2 rounded fw-bolder">Benefits for Employees</h2>
+             
                 <div>
                     <div class="d-flex align-items-center">
-                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Digital
-                                Time Tracking:</span> Digital check-ins make attendance management simple.</p>
+                        <p><i class="fa-solid fa-star-half-stroke text-gradient fs-4 "></i> <span style="color: #FF0000;">Full Control:</span> Employees can manage and access their own data (attendance, leave, payroll) without HR intervention.</p>
                     </div>
                     <div class="d-flex align-items-center">
-                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span
-                                style="color: #FF0000;">Customizable Schedules:</span> Adapt for different shifts,
-                            overtime, and remote work.</p>
+                        <p><i class="fa-solid fa-star-half-stroke text-gradient fs-4 "></i> <span style="color: #FF0000;">Transparency: </span>Employees always know where they stand with leave balances, attendance records, and salary breakdowns.</p>
                     </div>
                     <div class="d-flex align-items-center">
-                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Data
-                                Security:</span> Safeguard sensitive information with advanced security measures.</p>
+                        <p><i class="fa-solid fa-star-half-stroke text-gradient fs-4 "></i> <span style="color: #FF0000;">Efficiency: </span> Streamlined leave requests, payroll access, and attendance tracking reduce the time spent on HR-related tasks.</p>
                     </div>
+                 
                 </div>
             </div>
             <div class="col-lg-4 animate-left d-lg-none">
@@ -500,179 +320,78 @@
     <div class="container my-4">
         <div class="row align-items-center">
             <div class="col-lg-8 animate-left">
-                <h2 class="text-gradient fw-bolder">Leave Management</h2>
-                <p>This feature optimizes the leave request process by having leave balances and approval workflows
-                    accessible and easy for monitoring. This avoids delays and benefits flexibility across teams.</p>
+                <h2 class="text-gradient fw-bolder">HRIFY BOOSTER Admin App & Web Software</h2>
+                <p>The HRIFY BOOSTER Admin Portal offers comprehensive tools to manage your workforce efficiently. Admins can oversee employee records, manage attendance, leave approvals, payroll processing, and more—all from one centralized system. With powerful data analytics and reporting features, HRIFY BOOSTER’s Admin Portal streamlines HR workflows, increases transparency, and simplifies compliance.</p>
                 <div>
                     <div class="d-flex align-items-center">
-                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Easy
-                                Leave Requests:</span> Employees can quickly submit leave requests through
-                            the portal.</p>
-                    </div>
-                    <div class="d-flex align-items-center">
                         <p><i style="color: red;" class="fa-solid fa-circle"></i> <span
-                                style="color: #FF0000;">Automated Approvals:</span> Managers receive notifications for
-                            timely approvals.</p>
+                                style="color: #FF0000;">User Management </span> Admins can add, edit, and remove employee profiles, assign roles, and manage access to the Employee Portal. Simplifies onboarding and ensures that only authorized personnel have access to sensitive HR data.</p>
                     </div>
                     <div class="d-flex align-items-center">
-                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Balance
-                                Tracking:</span> Clearly view available leave balances, reducing HR workload.</p>
+                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Lead & Follow-Up Management</span> Manage potential candidates, track lead progress, and schedule follow-ups from a single interface. Keeps track of recruitment leads and helps optimize the hiring process by ensuring timely follow-ups.
+                        </p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Attendance & Time Tracking Management</span>Attendance & Time Tracking Management
+                            View and approve attendance logs, track employee working hours, and calculate overtime. Ensures compliance with working hour regulations and allows admins to generate accurate payroll reports.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Leave Approval Workflow</span>
+                            Admins can approve or deny leave requests from employees based on availability and company policy. Streamlines the leave approval process and prevents staffing issues.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Payroll Processing & Payslip Generation</span>
+                            Payroll Processing & Payslip Generation
+Admins can manage payroll, calculate salaries, generate payslips, and handle tax deductions. Automates complex payroll tasks, reduces human error, and ensures compliance with tax laws.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Analytics & Reporting</span>
+                            Generate real-time reports on employee attendance, leave, payroll, and overall HR performance. Admins can make data-driven decisions based on actionable insights and trends.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Employee Management</span>
+                            Manage employee records, track performance, and store important documents (contracts, performance reviews, etc). Provides a centralized location for all employee data and enhances HR decision-making.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Tax Compliance & Automated Deductions</span>
+                            HRIFY BOOSTER ensures tax deductions are applied automatically based on local laws and company policies. Minimizes the risk of tax-related errors and ensures timely, accurate tax filings.</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Mobile & Web Access for Admins</span>
+                            Access and manage HR data on-the-go via mobile apps or through the secure web portal. Admins can handle HR responsibilities anytime, anywhere, providing flexibility to work remotely or while traveling.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 animate-right">
-                <img class="img-fluid" src="./Images/Home-Images/home image 4 (2).png" alt="Leave Management">
+                <img class="img-fluid" src="./Images/Home-Images/home image 2.png" alt="Employee Management">
             </div>
         </div>
     </div>
 
     <div class="container my-4">
         <div class="row align-items-center">
-            <div class="col-lg-4 animate-left d-none d-lg-block">
-                <img class="img-fluid" src="./Images/Home-Images/home image 5.png" alt="Department Management">
-            </div>
+          
             <div class="col-lg-8 animate-right">
-                <h2 class="text-gradient fw-bolder">Department Management</h2>
-                <p>Organize departments to improve workflow, assign tasks within each Employee and track team
-                    performance. HRIFY encourages inter-departmental organization and collaboration.</p>
+                <h2 class=" background-gradient text-light col-12 col-lg-6 text-center py-2 rounded fw-bolder">Benefits for Employees</h2>
+             
                 <div>
                     <div class="d-flex align-items-center">
-                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Role
-                                Assignments:</span> Assign roles and ensure accountability within departments.</p>
+                        <p><i class="fa-solid fa-star-half-stroke text-gradient fs-4 "></i> <span style="color: #FF0000;">Streamlined HR Operations</span> Admins can manage the full HR cycle—from recruitment to payroll—with a single, integrated tool.</p>
                     </div>
                     <div class="d-flex align-items-center">
-                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span
-                                style="color: #FF0000;">Organized Departments:</span> Arrange teams for optimal
-                            efficiency and alignment.</p>
+                        <p><i class="fa-solid fa-star-half-stroke text-gradient fs-4 "></i> <span style="color: #FF0000;">Increased Accuracy </span>Automation of payroll, tax calculations, and leave tracking reduces errors and saves time.</p>
                     </div>
                     <div class="d-flex align-items-center">
-                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span
-                                style="color: #FF0000;">Performance Insights:</span> Track department achievements and
-                            KPIs on projects.</p>
+                        <p><i class="fa-solid fa-star-half-stroke text-gradient fs-4 "></i> <span style="color: #FF0000;">Actionable Insights </span> Real-time analytics and reporting help HR managers make informed decisions and improve workforce planning.</p>
                     </div>
+                    <div class="d-flex align-items-center">
+                        <p><i class="fa-solid fa-star-half-stroke text-gradient fs-4 "></i> <span style="color: #FF0000;">Centralized HR Data</span> All employee records and documents are stored in one place for easy access and management.</p>
+                    </div>
+                 
                 </div>
             </div>
-            <div class="col-lg-4 animate-left d-lg-none">
-                <img class="img-fluid" src="./Images/Home-Images/home image 5.png" alt="Department Management">
-            </div>
-        </div>
-    </div>
-
-    <div class="container my-4">
-        <div class="row align-items-center">
-            <div class="col-lg-8 animate-left">
-                <h2 class="text-gradient fw-bolder">Payroll</h2>
-                <p>HRIFY automates payroll calculations, ensuring accurate and tax-compliant processing. This eliminates
-                    manual errors, saves HR teams time and enables quick payslip generation. Employees receive timely,
-                    transparent payslips with detailed earnings and deductions, improving efficiency and clarity in
-                    payroll management.</p>
-                <div>
-                    <div class="d-flex align-items-center">
-                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span
-                                style="color: #FF0000;">Automated Calculations:</span> Automatically handle payroll
-                            processing with accuracy.</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Payslip
-                                Generation:</span> Generate and distribute payslips in a few clicks.</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span
-                                style="color: #FF0000;">Compliance Assurance:</span> Ensure payroll is aligned with tax
-                            regulations and compliant.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 animate-right">
-                <img class="img-fluid" src="./Images/Home-Images/home image 6.png" alt="Payroll Image">
-            </div>
-        </div>
-    </div>
-
-    <div class="container my-4">
-        <div class="row align-items-center">
-            <div class="col-lg-4 animate-left d-none d-lg-block">
-                <img class="img-fluid" src="./Images/Home-Images/home image 7.png" alt="Payslip Management Image">
-            </div>
-            <div class="col-lg-8 animate-right">
-                <h2 class="text-gradient fw-bolder">Payslip Management</h2>
-                <p>HRIFY streamlines the payslip generating process by automating payroll calculations, assuring
-                    accuracy and tax compliance. This feature provides employees with clear, easily accessible payslip
-                    records while saving manual effort and streamlines HR procedures.</p>
-                <div>
-                    <div class="d-flex align-items-center">
-                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span
-                                style="color: #FF0000;">Automated Payslip Generation:</span> Instantly generate
-                            payslips, saving time and reducing errors.</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Payslip
-                                Reports:</span> Generate detailed reports for easy tracking of employee earnings,
-                            deductions, and tax details.</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Detailed
-                                Earnings and Deductions:</span> Provides a transparent breakdown of salary components,
-                            taxes, and deductions.</p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: #FF0000;">Easy
-                                Employee Access:</span> Employees can securely view and download their payslips anytime
-                            from the platform.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 animate-left d-lg-none">
-                <img class="img-fluid" src="./Images/Home-Images/home image 7.png" alt="Payslip Management Image">
-            </div>
-        </div>
-    </div>
-
-    <div class="container my-4">
-        <div class="row align-items-center">
-            <div class="col-12 col-lg-7 animate-left">
-                <h2 class="fw-bolder background-gradient col-12 col-lg-6 text-center py-1 text-light rounded">Why Choose
-                    HRIFY?</h2>
-                <div class="my-3">
-                    <div class="d-flex align-items-center">
-                        <p><i style="color: red; font-size: 25px;" class="fa-solid fa-arrow-trend-up"></i>
-                            <span style="color: #FF0000;">Comprehensive HR Solution: </span>
-                            HRIFY covers all core HR needs in one integrated platform, making it easier to manage
-                            people, processes, and data.
-                        </p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <p><i style="color: red; font-size: 25px;" class="fa-solid fa-arrow-trend-up"></i>
-                            <span style="color: #FF0000;">User-Friendly Design: </span>
-                            HRIFY's attractive, easy-to-use interface enables employees and HR staff to utilize the
-                            program seamlessly.
-                        </p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <p><i style="color: red; font-size: 25px;" class="fa-solid fa-arrow-trend-up"></i>
-                            <span style="color: #FF0000;">Scalable for Growth: </span>
-                            Whether you're a small business or a growing enterprise, HRIFY scales to meet your evolving
-                            HR needs.
-                        </p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <p><i style="color: red; font-size: 25px;" class="fa-solid fa-arrow-trend-up"></i>
-                            <span style="color: #FF0000;">Data Security & Compliance: </span>
-                            We prioritize data protection, offering secure storage and compliance with regulations to
-                            safeguard sensitive employee information.
-                        </p>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <p><i style="color: red; font-size: 25px;" class="fa-solid fa-arrow-trend-up"></i>
-                            <span style="color: #FF0000;">Efficient Support Team: </span>
-                            Our support team is dedicated to assisting you with onboarding, troubleshooting, and ongoing
-                            help to ensure smooth HR operations.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-5 animate-right">
-                <img class="img-fluid" src="./Images/Home-Images/home image 8.png" alt="Why Choose HRIFY?">
+            <div class="col-lg-4 animate-left">
+                <img class="img-fluid" src="./Images/HrifyBooster/Benefits Hrify booster.png" alt="Attendance Management">
             </div>
         </div>
     </div>
@@ -703,7 +422,6 @@
                         </button>
                         
                         <div class="testimonial-slides my-5">
-                          
                             <div class="testimonial-slide">
                                 <img src="./Images/Home-Images/Testimonial image 1.png" alt="Testimonial 1">
                             </div>
@@ -744,7 +462,7 @@
             .testimonial-slide {
                 min-width: 100%;
                 box-sizing: border-box;
-                padding: 0 100px; 
+                padding: 0 100px; /* Increased padding for more space */
             }
             
             .testimonial-slide img {
@@ -786,7 +504,7 @@
             
             @media (max-width: 768px) {
                 .testimonial-slide {
-                    padding: 0 20px; 
+                    padding: 0 20px; /* Adjusted padding for mobile */
                 }
             
                 .nav-btn {
@@ -837,11 +555,14 @@
                     slideInterval = setInterval(nextSlide, 5000);
                 }
             
+                // Pause auto-sliding when hovering over the slider
                 slidesContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
                 slidesContainer.addEventListener('mouseleave', resetInterval);
             
+                // Initialize first slide position
                 updateSlidePosition();
             
+                // Update slide position on window resize
                 window.addEventListener('resize', updateSlidePosition);
             });
             </script> -->
@@ -938,21 +659,11 @@
                     <p class="footer-text"><i class="fa-regular fa-envelope"></i>&nbsp; support@hrify.in</p>
                     <p class="footer-text"><i class="fa-solid fa-phone"></i>&nbsp; 8807880764</p>
                     <div class="d-flex gap-3 justify-content-center">
-                       <a href="">
-                        <img style="cursor: pointer;" class="img-fluid social-icon" src="./Images/logos/facebook.png" alt="Facebook">
-                       </a>
-                       <a href="">
-                        <img style="cursor: pointer;" class="img-fluid social-icon" src="./Images/logos/Youtube.png" alt="YouTube">
-                       </a>
-                       <a href="">
-                        <img style="cursor: pointer;" class="img-fluid social-icon" src="./Images/logos/x icon.png" alt="Twitter">
-
-                       </a>
-                       <a href="">
-                        <img style="cursor: pointer;" class="img-fluid social-icon" src="./Images/logos/instagram.png" alt="Instagram">
-
-                       </a>
-                        <!-- <img class="img-fluid social-icon" src="./Images/logos/linkedin.png" alt="LinkedIn"> -->
+                        <img class="img-fluid social-icon" src="./Images/logos/facebook.png" alt="Facebook">
+                        <img class="img-fluid social-icon" src="./Images/logos/Youtube.png" alt="YouTube">
+                        <img class="img-fluid social-icon" src="./Images/logos/x icon.png" alt="Twitter">
+                        <img class="img-fluid social-icon" src="./Images/logos/linkedin.png" alt="LinkedIn">
+                        <img class="img-fluid social-icon" src="./Images/logos/instagram.png" alt="Instagram">
                     </div>
                 </div>
             </div>

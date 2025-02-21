@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRIFY</title>
+    <link rel="icon" href="./Images/logos/hrify fevicon.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" href="Styles/styles.css">
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-brand img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-link {
+            color: #333;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+        }
+
+        .nav-link:hover {
+            color: red;
+        }
+
+
+        .btn-demo {
+            background-color: #FF0000;
+            color: white;
+            border-radius: 25px;
+            padding: 8px 24px;
+            margin-right: 10px;
+        }
+
+        .btn-signup {
+            background-color: #FF0000;
+            color: white;
+            border-radius: 25px;
+            padding: 8px 24px;
+        }
+
+        .btn-demo:hover,
+        .btn-signup:hover {
+            background-color: #E60000;
+            color: white;
+        }
+
+        @media (max-width: 991.98px) {
+            .navbar-nav {
+                padding: 1rem 0;
+            }
+
+            .nav-button-group {
+                margin-top: 1rem;
+                display: flex;
+                gap: 10px;
+            }
+        }
+    </style>
+    <style>
+        .text-gradient {
+            background: #FF0000;
+            background: linear-gradient(to top, #FF0000 100%, #990000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .background-gradient {
+            background: rgb(255, 0, 0);
+            background: linear-gradient(90deg, rgba(255, 0, 0, 1) 100%, rgba(153, 0, 0, 1) 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img style="height: 70px;" src="./Images/logos/Hrify Logo (2).png" alt="HRIFY Logo" class="img-fluid">
+            </a>
+            <style>
+                @media (max-width: 768px) {
+                    .navbar-brand img {
+                        height: 50px !important;
+                    }
+                }
+                @media (min-width: 992px) {
+                    .nav-item.dropdown:hover .dropdown-menu {
+                        display: block;
+                        margin-top: 0;
+                    }
+                }
+                .nav-item-hover:hover {
+                    color: #FF0000 !important;
+                }
+            </style>
+    
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navigation Items -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-item-hover" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 18px;">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a  class="dropdown-item" href="HrifyWeb.html">HRIFY Web Software</a></li>
+                            <li><a class="dropdown-item" href="HrifyMobile.html">HRIFY Mobile App</a></li>
+                            <li><a class="dropdown-item" href="HrifyBooster.html">HRIFY Booster</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle nav-item-hover" href="#" id="navbarDropdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 18px;color: red;">
+                            Solutions
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a  class="dropdown-item" href="GlobalPayroll.html">Global Payroll Management</a></li>
+                            <li><a style="color: red;"  class="dropdown-item" href="StaffingSolutions.html">Staffing Solutions</a></li>
+                        
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="pricing.html">Pricing</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="clients.html">Clients</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="carrer.html">Career</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="channelpartner.html">Channel Partner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size: 18px;" class="nav-link nav-item-hover" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+    
+                <!-- Action Buttons -->
+                <div class="nav-button-group">
+                    <a href="demo.html" class="btn btn-demo">Demo</a>
+                    <a target="_blank" href="https://hrms-web-app.web.app/" class="btn btn-signup">Sign Up</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container ">
+        <div class="row align-items-center">
+            <div class="col-12 col-lg-8 animate-left">
+                <h3 class="mt-5 fw-bolder ">"Find the Right Talent, When You 
+                    Need It!"</h3>
+                <p>"HRIFY's staffing solutions ensure you get the perfect candidates to meet your business needs, on time and on demand."</p>
+                <button style="border: none;" class="background-gradient text-light px-2 py-2 rounded fw-bolder">Request Staffing Solutions</button>
+                <h3 class="mt-5 fw-bolder text-gradient " >Flexible Staffing Solutions Tailored to 
+                    Your Business</h3>
+                    <p>At HRIFY, we simplify the process of building your team with our flexible staffing solutions. Whether you need temporary staff, contract-to-hire, or permanent placements, we help you access skilled professionals quickly and efficiently. Our staffing services are designed to reduce hiring time, cut costs, and ensure you get the right talent to meet your business objectives.</p>
+                    <div>    
+                        <div class="d-flex align-items-center">
+                            <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: red;" > Customizable Staffing Solutions:</span>Tailored options, including temporary staff, contract-to-hire, and permanent placements to meet your unique business needs.</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <p><i style="color: red;" class="fa-solid fa-circle"></i> <span style="color: red;" > Quick Access to Skilled Professionals:</span>Streamlined hiring process to provide qualified candidates quickly and efficiently.</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <p><i style="color: red;" class="fa-solid fa-circle"></i><span style="color: red;" > Cost-Effective Hiring:</span>Reduce recruitment costs with flexible staffing models that match your budget and timeline.</p>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <p><i style="color: red;" class="fa-solid fa-circle"></i><span style="color: red;" > Reduced Hiring Time:</span>Minimize the time spent on searching, vetting, and onboarding candidates.</p>
+                        </div>
+                      
+                    </div>
+            </div>
+            <div class="col-12 col-lg-4 animate-right">
+                <img class="img-fluid text-center " src="./Images/Staffing/img1 (6).png" alt="HRIFY">
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Initial animation state */
+        .animate-left,
+        .animate-right {
+            opacity: 0;
+            transition: transform 1s ease-out, opacity 1s ease-out;
+        }
+
+        /* When elements are visible */
+        .animate-left.visible,
+        .animate-right.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        /* Animation directions */
+        @media (min-width: 768px) {
+
+            /* Only apply translateX on larger screens */
+            .animate-left {
+                transform: translateX(-50px);
+            }
+
+            .animate-right {
+                transform: translateX(50px);
+            }
+        }
+
+        /* For mobile, use fade-in animation */
+        @media (max-width: 767px) {
+
+            .animate-left,
+            .animate-right {
+                transform: translateY(20px);
+            }
+        }
+    </style>
+    <script>
+        function setupAnimations() {
+            const elements = document.querySelectorAll('.animate-left, .animate-right');
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.1 }
+            );
+
+            elements.forEach((element) => observer.observe(element));
+        }
+
+        document.addEventListener('DOMContentLoaded', setupAnimations);
+        window.addEventListener('resize', setupAnimations);
+    </script>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+  const fadeElements = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  fadeElements.forEach(element => {
+    element.style.opacity = '0';
+    element.style.transition = 'opacity 0.5s ease';
+    observer.observe(element);
+  });
+});
+                    </script>
+
+<div class="container text-center ">
+    <h2 class="text-gradient" >Staffing's We Provide</h2>
+    <h6 class="text-gradient" >Innovative Solutions for Talents</h6>
+  </div>
+            <div class="container w-100 fade-in ">
+                <div class="container">
+                 
+                        <div class="container">
+                            <div class="row" style="display: flex; flex-wrap: wrap;">
+                              <div class=" fade-in col-12  col-lg-4 mb-4  ">
+                                <div class="rounded" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; min-height: 250px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; padding: 1.5rem;">
+                                  <img class="img-fluid" src="./Images/Staffing/box1 (3).png" alt="Employee Management" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+                                  <h6 class="text-gradient" >Specialized IT Staffing</h6>
+                                  <p style="font-family: roboto; color: 3C3D37;" >Fill critical IT roles with skilled professionals, from developers to cybersecurity experts, tailored to your tech requirements.</p>
+                                  <button class="text-light px-4 rounded py-2" style="background-color: red; border: none;" >Read More</button>
+                                </div>
+                              </div>
+                              <div class=" fade-in col-12 col-sm-6 col-lg-4 mb-4  ">
+                                <div class="rounded" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; min-height: 250px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; padding: 1.5rem;">
+                                  <img class="img-fluid" src="./Images/Staffing/box2 (3).png" alt="Employee Management" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+                                  <h6 class="text-gradient" >Temporary Staffing</h6>
+                                  <p style="font-family: roboto; color: 3C3D37;" >Fill critical IT roles with skilled professionals, from developers to cybersecurity experts, tailored to your tech requirements.</p>
+                                  <button class="text-light px-4 rounded py-2" style="background-color: red; border: none;" >Read More</button>
+                                </div>
+                              </div>
+                              <div class=" fade-in col-12 col-sm-6 col-lg-4 mb-4  ">
+                                <div class="rounded" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; min-height: 250px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; padding: 1.5rem;">
+                                  <img class="img-fluid" src="./Images/Staffing/box3 (3).png" alt="Employee Management" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+                                  <h6 class="text-gradient" >Contract-to-Hire</h6>
+                                  <p style="font-family: roboto; color: 3C3D37;" >Fill critical IT roles with skilled professionals, from developers to cybersecurity experts, tailored to your tech requirements.</p>
+                                  <button class="text-light px-4 rounded py-2" style="background-color: red; border: none;" >Read More</button>
+                                </div>
+                              </div>
+                              <div class=" fade-in col-12 col-sm-6 col-lg-4 mb-4  ">
+                                <div class="rounded" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; min-height: 250px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; padding: 1.5rem;">
+                                  <img class="img-fluid" src="./Images/Staffing/box4 (2).png" alt="Employee Management" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+                                  <h6 class="text-gradient" >Permanent Staffing</h6>
+                                  <p style="font-family: roboto; color: 3C3D37;" >Fill critical IT roles with skilled professionals, from developers to cybersecurity experts, tailored to your tech requirements.</p>
+                                  <button class="text-light px-4 rounded py-2" style="background-color: red; border: none;" >Read More</button>
+                                </div>
+                              </div>
+                              <div class=" fade-in col-12 col-sm-6 col-lg-4 mb-4  ">
+                                <div class="rounded" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; min-height: 250px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; padding: 1.5rem;">
+                                  <img class="img-fluid" src="./Images/Staffing/box5 (2).png" alt="Employee Management" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+                                  <h6 class="text-gradient" >Project-Based Staffing</h6>
+                                  <p style="font-family: roboto; color: 3C3D37;" >Fill critical IT roles with skilled professionals, from developers to cybersecurity experts, tailored to your tech requirements.</p>
+                                  <button class="text-light px-4 rounded py-2" style="background-color: red; border: none;" >Read More</button>
+                                </div>
+                              </div>
+                              <div class=" fade-in col-12 col-sm-6 col-lg-4 mb-4  ">
+                                <div class="rounded" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; min-height: 250px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; padding: 1.5rem;">
+                                  <img class="img-fluid" src="./Images/Staffing/box6 (2).png" alt="Employee Management" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+                                  <h6 class="text-gradient" >Remote Staffing</h6>
+                                  <p style="font-family: roboto; color: 3C3D37;" >Fill critical IT roles with skilled professionals, from developers to cybersecurity experts, tailored to your tech requirements.</p>
+                                  <button class="text-light px-4 rounded py-2" style="background-color: red; border: none;" >Read More</button>
+                                </div>
+                              </div>
+                              <div class=" fade-in col-12 col-sm-6 col-lg-4 mb-4  ">
+                                <div class="rounded" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; min-height: 250px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; padding: 1.5rem;">
+                                  <img class="img-fluid" src="./Images/Staffing/box7.png" alt="Employee Management" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+                                  <h6 class="text-gradient" >Executive Staffing</h6>
+                                  <p style="font-family: roboto; color: 3C3D37;" >Fill critical IT roles with skilled professionals, from developers to cybersecurity experts, tailored to your tech requirements.</p>
+                                  <button class="text-light px-4 rounded py-2" style="background-color: red; border: none;" >Read More</button>
+                                </div>
+                              </div>
+                              <div class=" fade-in col-12 col-sm-6 col-lg-4 mb-4  ">
+                                <div class="rounded" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; min-height: 250px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; padding: 1.5rem;">
+                                  <img class="img-fluid" src="./Images/Staffing/box8.png" alt="Employee Management" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+                                  <h6 class="text-gradient" >On-Demand Staffing</h6>
+                                  <p style="font-family: roboto; color: 3C3D37;" >Fill critical IT roles with skilled professionals, from developers to cybersecurity experts, tailored to your tech requirements.</p>
+                                  <button class="text-light px-4 rounded py-2" style="background-color: red; border: none;" >Read More</button>
+                                </div>
+                              </div>
+                              <div class=" fade-in col-12 col-sm-6 col-lg-4 mb-4  ">
+                                <div class="rounded" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; min-height: 250px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; padding: 1.5rem;">
+                                  <img class="img-fluid" src="./Images/Staffing/box9.png" alt="Employee Management" style="max-width: 100%; height: auto; margin-bottom: 1rem;">
+                                  <h6 class="text-gradient" >Accounting and Finance</h6>
+                                  <p style="font-family: roboto; color: 3C3D37;" >Fill critical IT roles with skilled professionals, from developers to cybersecurity experts, tailored to your tech requirements.</p>
+                                  <button class="text-light px-4 rounded py-2" style="background-color: red; border: none;" >Read More</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+            
+                </div>
+            </div>
+
+           
+    <div class="container my-3">
+        <h2 class="text-gradient text-center fw-bolder" >Why Choose Us</h2>
+                
+    <div class=" p-5 fade-in justify-content-center d-flex ">
+       
+        <img class="img-fluid col-10" src="./Images/Staffing/img2.png" alt="">
+    </div>
+    </div>
+
+   <div class="p-3 ">
+    <div style="box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;" class="container rounded p-3 p-lg-5">
+        <h1 class="text-gradient text-center fw-bolder mb-5" >Industries We Serve</h1>
+        <div class="row align-items-center justify-content-center ">
+            <div class="col-6 col-lg-2 text-center ">
+                <img class="img-fluid col-3 " src="./Images/Staffing/icon1.png" alt="">
+                <p style="font-size:12px;" class="mt-2" >Information Technology</p>
+            </div>
+            <div class="col-6 col-lg-2 text-center ">
+                <img class="img-fluid col-3" src="./Images/Staffing/icon2.png" alt="">
+                <p style="font-size:12px;" class="mt-2" >Healthcare</p>
+            </div>
+            <div class="col-6 col-lg-2 text-center ">
+                <img class="img-fluid col-3" src="./Images/Staffing/icon3.png" alt="">
+                <p style="font-size:12px;" class="mt-2" >Hotels</p>
+            </div>
+            <div class="col-6 col-lg-2 text-center ">
+                <img class="img-fluid col-3" src="./Images/Staffing/icon4.png" alt="">
+                <p style="font-size:12px;" class="mt-2" >Retail and Ecommerce</p>
+            </div>
+            <div class="col-6 col-lg-2 text-center ">
+                <img class="img-fluid col-3" src="./Images/Staffing/icon5.png" alt="">
+                <p style="font-size:12px;" class="mt-2" >Finance and Accounting</p>
+            </div>
+            <div class="col-6 col-lg-2 text-center ">
+                <img class="img-fluid col-3" src="./Images/Staffing/icon6.png" alt="">
+                <p style="font-size:12px;" class="mt-2" >Manufacturing</p>
+            </div>
+            <div class="col-6 col-lg-2 text-center ">
+                <img class="img-fluid col-3" src="./Images/Staffing/icon7.png" alt="">
+                <p style="font-size:12px;" class="mt-2" >Hospitality</p>
+            </div>
+            <div class="col-6 col-lg-2 text-center ">
+                <img class="img-fluid col-3" src="./Images/Staffing/icon8.png" alt="">
+                <p style="font-size:12px;" class="mt-2" >Construction</p>
+            </div>
+            <div class="col-6 col-lg-2 text-center ">
+                <img class="img-fluid col-3" src="./Images/Staffing/icon9.png" alt="">
+                <p style="font-size:12px;" class="mt-2" >Education</p>
+            </div>
+            <div class="col-6 col-lg-2 text-center ">
+                <img class="img-fluid col-3" src="./Images/Staffing/icon10.png" alt="">
+                <p style="font-size:12px;" class="mt-2" >Driving</p>
+            </div>
+            <div class="col-6 col-lg-2 text-center ">
+                <img class="img-fluid col-3" src="./Images/Staffing/icon11.png" alt="">
+                <p style="font-size:12px;" class="mt-2" >Logistics and Supply 
+                    Chain</p>
+            </div>
+            <div class="col-6 col-lg-2 text-center ">
+                <img class="img-fluid col-3" src="./Images/Staffing/icon12.png" alt="">
+                <p style="font-size:12px;" class="mt-2  " >Telecommunications</p>
+            </div>
+        </div>
+    </div>
+   </div>
+
+   <style>
+    .staffing-form-container {
+      background-color: #ff0000;
+      padding: 15px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .staffing-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    
+    .staffing-form-field {
+      margin-bottom: 15px;
+    }
+  
+    .staffing-form-full-width {
+      grid-column: 1 / -1;
+    }
+    
+    .staffing-form-label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+    }
+    
+    .staffing-form-input,
+    .staffing-form-select,
+    .staffing-form-textarea {
+      width: 100%;
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      background: white;
+      font-size: 14px;
+    }
+    
+    .staffing-form-textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+    
+    .staffing-form-submit {
+      background-color: #FFD700;
+      color: black;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      display: block;
+      margin: 15px auto;
+    }
+  
+    /* Tablet mode */
+    @media (max-width: 768px) {
+      .staffing-form-container {
+        padding: 10px;
+      }
+  
+      .staffing-form-grid {
+        gap: 10px;
+      }
+  
+      .staffing-form-label {
+        font-size: 16px;
+      }
+  
+      .staffing-form-input,
+      .staffing-form-select,
+      .staffing-form-textarea {
+        font-size: 13px;
+      }
+  
+      .staffing-form-submit {
+        padding: 8px 25px;
+        font-size: 15px;
+      }
+    }
+  
+    /* Mobile mode */
+    @media (max-width: 480px) {
+      .staffing-form-container {
+        padding: 8px;
+      }
+  
+      .staffing-form-grid {
+        grid-template-columns: 1fr;
+      }
+  
+      .staffing-form-label {
+        font-size: 14px;
+      }
+  
+      .staffing-form-input,
+      .staffing-form-select,
+      .staffing-form-textarea {
+        font-size: 12px;
+        padding: 6px;
+      }
+  
+      .staffing-form-submit {
+        padding: 8px 20px;
+        font-size: 14px;
+      }
+    }
+  </style>
+
+  <p class="text-center">"Let Us Help You Build Your Dream Team"</p>
+  
+  <div class="staffing-form-container p-lg-5 my-4 ">
+    <form class="staffing-form">
+      <div class="staffing-form-grid">
+        <div class="staffing-form-field">
+          <label class="staffing-form-label" for="fullName">Full Name</label>
+          <input class="staffing-form-input" type="text" id="fullName" name="fullName" required>
+        </div>
+        
+        <div class="staffing-form-field">
+          <label class="staffing-form-label" for="companyName">Company Name</label>
+          <input class="staffing-form-input" type="text" id="companyName" name="companyName" required>
+        </div>
+        
+        <div class="staffing-form-field">
+          <label class="staffing-form-label" for="email">Email Address</label>
+          <input class="staffing-form-input" type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="staffing-form-field">
+          <label class="staffing-form-label" for="contact">Contact Number</label>
+          <input class="staffing-form-input" type="tel" id="contact" name="contact" required>
+        </div>
+        
+        <div class="staffing-form-field">
+          <label class="staffing-form-label" for="staffing">Staffing Requirements</label>
+          <select class="staffing-form-select" id="staffing" name="staffing" required>
+            <option value="">Select an option</option>
+            <option value="temporary">Temporary Staffing</option>
+            <option value="permanent">Permanent Staffing</option>
+            <option value="contract">Contract-to-Hire</option>
+            <option value="project">Project-Based Staffing</option>
+            <option value="remote">Remote Staffing</option>
+            <option value="executive">Executive Staffing</option>
+          </select>
+        </div>
+        
+        <div class="staffing-form-field">
+          <label class="staffing-form-label" for="industry">Industry Type</label>
+          <select class="staffing-form-select" id="industry" name="industry" required>
+            <option value="">Select an option</option>
+            <option value="it">IT</option>
+            <option value="healthcare">Healthcare</option>
+            <option value="retail">Retail</option>
+            <option value="manufacturing">Manufacturing</option>
+            <option value="finance">Finance</option>
+          </select>
+        </div>
+        
+        <div class="staffing-form-field">
+          <label class="staffing-form-label" for="positions">Position(s) Needed</label>
+          <textarea class="staffing-form-textarea" id="positions" name="positions" required></textarea>
+        </div>
+        
+        <div class="staffing-form-field">
+          <label class="staffing-form-label" for="startDate">Expected Start Date</label>
+          <input class="staffing-form-input" type="date" id="startDate" name="startDate" required>
+        </div>
+        
+        <div class="staffing-form-field">
+          <label class="staffing-form-label" for="duration">Estimated Duration</label>
+          <select class="staffing-form-select" id="duration" name="duration" required>
+            <option value="">Select an option</option>
+            <option value="short">Short-Term (1-6 months)</option>
+            <option value="long">Long-Term (6+ months)</option>
+            <option value="permanent">Permanent</option>
+          </select>
+        </div>
+        
+        <div class="staffing-form-field">
+          <label class="staffing-form-label" for="positionsCount">Number of Positions Needed</label>
+          <input class="staffing-form-input" type="number" id="positionsCount" name="positionsCount" min="1" required>
+        </div>
+        
+        <div class="staffing-form-field staffing-form-full-width">
+          <label class="staffing-form-label" for="comments">Additional Requirements or Comments</label>
+          <textarea class="staffing-form-textarea" id="comments" name="comments"></textarea>
+        </div>
+      </div>
+      
+      <button type="submit" class="staffing-form-submit">Submit</button>
+    </form>
+  </div>
+  
+  
+
+
+
+
+  
+
+
+   
+
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .footer-text {
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .footer-text:hover {
+            color: red !important;
+            cursor: pointer;
+        }
+
+        .social-icon {
+            transition: filter 0.3s ease;
+        }
+    </style>
+
+
+
+
+
+    <footer class="p-5" style="background-color: black;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <h5 class="text-gradient fw-bolder">Explore More</h5>
+
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Home</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Product</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Careers</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Channel Partner</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Blog</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Contact Us</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Pricing</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Clients</p>
+                    </a>
+
+
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h5 class="text-gradient fw-bolder">Our Services</h5>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Employee Management</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Attendance Tracking</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Leave Management</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Department Structuring</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payroll Processing</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payslip Generation</p>
+                    </a>
+
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h5 class="text-gradient fw-bolder">Why Choose HRIFY?</h5>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">User-Friendly Design</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Customer Support</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Attendance Tracking</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Leave Management</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Request a Demo</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Department Structuring</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payroll Processing</p>
+                    </a>
+                    <a style="text-decoration: none;" href="index.html">
+                        <p class="footer-text">Payslip Generation</p>
+                    </a>
+
+                </div>
+                <div class="col-12 col-lg-3 justify-content-center text-center">
+                    <img class="img-fluid" src="./Images/logos/footer logo.png" alt="HRIFY logo">
+                    <h5 style="cursor: pointer;" class="background-gradient text-center mt-3 py-2 rounded text-light">
+                        Download Brochure</h5>
+                    <p class="footer-text"><i class="fa-regular fa-envelope"></i>&nbsp; support@hrify.in</p>
+                    <p class="footer-text"><i class="fa-solid fa-phone"></i>&nbsp; 8807880764</p>
+                    <div class="d-flex gap-3 justify-content-center">
+                        <img class="img-fluid social-icon" src="./Images/logos/facebook.png" alt="Facebook">
+                        <img class="img-fluid social-icon" src="./Images/logos/Youtube.png" alt="YouTube">
+                        <img class="img-fluid social-icon" src="./Images/logos/x icon.png" alt="Twitter">
+                        <img class="img-fluid social-icon" src="./Images/logos/linkedin.png" alt="LinkedIn">
+                        <img class="img-fluid social-icon" src="./Images/logos/instagram.png" alt="Instagram">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
