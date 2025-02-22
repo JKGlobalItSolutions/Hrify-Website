@@ -39,6 +39,26 @@
             background-color: black;
             color: white;
         }
+        /* Make category navigation scrollable on mobile */
+.category-nav-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.category-nav-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari */
+}
+
+.category-nav {
+    display: inline-flex;
+    width: max-content; /* Prevent wrapping */
+}
+
+.category-nav button {
+    flex-shrink: 0; /* Prevent buttons from shrinking */
+}
         .image-section img {
             width: 100%;
             height: auto;
@@ -217,12 +237,16 @@
             </li>
         </ul>
 
-        <div class="category-nav mt-3" id="category-nav">
-            <button class="active" onclick="changeCategory('payroll', event)">Payroll & HRMS</button>
-            <button onclick="changeCategory('task', event)">Task Management</button>
-            <button onclick="changeCategory('hiring', event)">Hiring</button>
-            <button onclick="changeCategory('booster', event)">HRIFY Booster</button>
-        </div>
+       <!-- Wrapping category nav inside a scrollable container -->
+<div class="category-nav-container">
+    <div class="category-nav mt-3" id="category-nav">
+        <button class="active" onclick="changeCategory('payroll', event)">Payroll & HRMS</button>
+        <button onclick="changeCategory('task', event)">Task Management</button>
+        <button onclick="changeCategory('hiring', event)">Hiring</button>
+        <button onclick="changeCategory('booster', event)">HRIFY Booster</button>
+    </div>
+</div>
+
 
         <div id="product-section">
             <div class="image-section text-center mt-4">
