@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,23 +10,26 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
     <script src="./components/includescript.js"></script>
-    
+
     <style>
         .nav-tabs .nav-link {
             border: none;
             font-weight: bold;
             color: black;
         }
+
         .nav-tabs .nav-link.active {
             background-color: #007bff;
             color: white;
             border-radius: 10px;
         }
+
         .category-nav {
             display: flex;
             justify-content: flex-start;
             margin-left: 15px;
         }
+
         .category-nav button {
             background-color: #d3d3d3;
             border: 2px solid yellow;
@@ -35,35 +39,43 @@
             color: black;
             cursor: pointer;
         }
+
         .category-nav .active {
             background-color: black;
             color: white;
         }
+
         /* Make category navigation scrollable on mobile */
-.category-nav-container {
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Hide scrollbar for Firefox */
-}
+        .category-nav-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            /* Hide scrollbar for Firefox */
+        }
 
-.category-nav-container::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for Chrome, Safari */
-}
+        .category-nav-container::-webkit-scrollbar {
+            display: none;
+            /* Hide scrollbar for Chrome, Safari */
+        }
 
-.category-nav {
-    display: inline-flex;
-    width: max-content; /* Prevent wrapping */
-}
+        .category-nav {
+            display: inline-flex;
+            width: max-content;
+            /* Prevent wrapping */
+        }
 
-.category-nav button {
-    flex-shrink: 0; /* Prevent buttons from shrinking */
-}
+        .category-nav button {
+            flex-shrink: 0;
+            /* Prevent buttons from shrinking */
+        }
+
         .image-section img {
             width: 100%;
             height: auto;
             max-width: 800px;
         }
+
         .pricing-header {
             display: flex;
             align-items: center;
@@ -74,10 +86,12 @@
             font-weight: bold;
             text-align: center;
         }
+
         .pricing-header img {
             width: 200px;
             height: auto;
         }
+
         .pricing-subtext {
             text-align: center;
             font-size: 14px;
@@ -87,6 +101,7 @@
             margin-left: auto;
             margin-right: auto;
         }
+
         .responsive-image-section {
             text-align: center;
             margin-top: 40px;
@@ -212,8 +227,9 @@
             height: auto;
         }
     </style>
-    
+
 </head>
+
 <body>
 
     <div id="navbar-container"></div>
@@ -224,8 +240,9 @@
             <span>Pricing</span>
         </div>
         <div class="pricing-subtext">
-            Choose the plan that suits your business needs. 
-            HRIFY offers flexible pricing to ensure you get the best value, whether you're a startup or a growing enterprise.
+            Choose the plan that suits your business needs.
+            HRIFY offers flexible pricing to ensure you get the best value, whether you're a startup or a growing
+            enterprise.
         </div>
 
         <ul class="nav nav-tabs">
@@ -237,15 +254,15 @@
             </li>
         </ul>
 
-       <!-- Wrapping category nav inside a scrollable container -->
-<div class="category-nav-container">
-    <div class="category-nav mt-3" id="category-nav">
-        <button class="active" onclick="changeCategory('payroll', event)">Payroll & HRMS</button>
-        <button onclick="changeCategory('task', event)">Task Management</button>
-        <button onclick="changeCategory('hiring', event)">Hiring</button>
-        <button onclick="changeCategory('booster', event)">HRIFY Booster</button>
-    </div>
-</div>
+        <!-- Wrapping category nav inside a scrollable container -->
+        <div class="category-nav-container">
+            <div class="category-nav mt-3" id="category-nav">
+                <button class="active" onclick="changeCategory('payroll', event)">Payroll & HRMS</button>
+                <button onclick="changeCategory('task', event)">Task Management</button>
+                <button onclick="changeCategory('hiring', event)">Hiring</button>
+                <button onclick="changeCategory('booster', event)">HRIFY Booster</button>
+            </div>
+        </div>
 
 
         <div id="product-section">
@@ -268,7 +285,7 @@
                                 <input type="text" class="form-control" required>
                             </div>
                         </div>
-    
+
                         <div class="row">
                             <div class="col-md-6">
                                 <label class="form-label">Business Email</label>
@@ -330,13 +347,14 @@
                                         <option value="bg_verification">Background Verification</option>
                                         <option value="training">Training and Development</option>
                                         <option value="staffing_payroll">Staffing Payroll</option>
-                                        <option value="payroll_statutory">Payroll & Statutory Compliance Services</option>
+                                        <option value="payroll_statutory">Payroll & Statutory Compliance Services
+                                        </option>
                                         <option value="hire_train_deploy">Hire, Train & Deploy</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                        
+
 
                         <div class="row">
                             <div class="col-12">
@@ -344,7 +362,7 @@
                                 <textarea class="form-control" rows="4" required></textarea>
                             </div>
                         </div>
-    
+
                         <div class="text-center mt-4">
                             <button type="submit" class="btn btn-quotation">Get Quotation</button>
                             <p class="form-footer-text">*Our team will connect with you shortly to assist further!</p>
@@ -397,4 +415,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
