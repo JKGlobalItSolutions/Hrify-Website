@@ -33,6 +33,268 @@
 </head>
 
 <body>
+
+
+
+
+    <!-- Call Button -->
+    <a href="tel:+911234567890" class="btn btn-success rounded-circle call-button shadow">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <!-- Chatbot Section -->
+    <section id="chatbot-section">
+
+        <!-- Bootstrap & Font Awesome -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+        <!-- Chatbot Toggle Button -->
+        <button class="btn btn-primary rounded-circle chatbot-toggler shadow">
+            <i class="fas fa-comment-alt"></i>
+        </button>
+
+        <!-- Chatbot Box -->
+        <div class="chatbot shadow-lg">
+            <div
+                class="chatbot-header bg-primary text-white d-flex justify-content-between align-items-center p-3 rounded-top">
+                <h5 class="mb-0">Chat Support</h5>
+                <button class="btn-close btn-close-white close-chatbot"></button>
+            </div>
+
+            <div class="chatbot-body p-3 d-flex flex-column gap-3">
+                <div class="bot-message bg-light p-2 rounded">Hello! How can I assist you?</div>
+            </div>
+
+            <div class="chatbot-footer d-flex p-3 gap-2 border-top">
+                <input type="text" class="form-control" id="userInput" placeholder="Type a message...">
+                <button class="btn btn-primary send-button"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+
+        <!-- Styles for Call Button & Chatbot -->
+        <style>
+            /* Call Button */
+            .call-button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+              
+                font-size: 24px;
+                z-index: 999;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s ease, background-color 0.3s ease;
+            }
+
+            .call-button:hover {
+                transform: scale(1.1);
+                background-color: #28a745;
+            }
+
+            /* Chatbot Section */
+            #chatbot-section {
+                position: relative;
+                z-index: 999;
+            }
+
+            /* Chatbot Toggle Button */
+            .chatbot-toggler {
+                position: fixed;
+                bottom: 100px;
+                /* moved down a bit for gap from call button */
+                right: 20px;
+              
+                font-size: 20px;
+                z-index: 1000;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s ease, background-color 0.3s ease;
+            }
+
+            .chatbot-toggler:hover {
+                transform: scale(1.1);
+                background-color: #0069d9;
+            }
+
+            /* Chatbot Window */
+            .chatbot {
+                position: fixed;
+                bottom: 160px;
+                /* more gap from toggler button */
+                right: 20px;
+                width: 320px;
+                background: #ffffff;
+                border-radius: 15px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+                display: none;
+                flex-direction: column;
+                animation: slideUp 0.3s ease-out;
+            }
+
+            @keyframes slideUp {
+                from {
+                    transform: translateY(20px);
+                    opacity: 0;
+                }
+
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            /* Chatbot Body */
+            .chatbot-body {
+                height: 260px;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                /* GAP between each message */
+                padding: 15px;
+            }
+
+            .chatbot-body::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            .chatbot-body::-webkit-scrollbar-thumb {
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+            }
+
+            .user-message {
+                align-self: flex-end;
+                background-color: #dcf8c6;
+                color: #000;
+                padding: 12px 15px;
+                border-radius: 20px 20px 0 20px;
+                max-width: 80%;
+                font-size: 14px;
+            }
+
+            .bot-message {
+                align-self: flex-start;
+                background-color: #f1f1f1;
+                color: #000;
+                padding: 12px 15px;
+                border-radius: 20px 20px 20px 0;
+                max-width: 80%;
+                font-size: 14px;
+            }
+
+            /* Chatbot Footer */
+            .chatbot-footer {
+                display: flex;
+                padding: 15px;
+                /* More space */
+                gap: 10px;
+                /* Gap between input and button */
+                border-top: 1px solid #ddd;
+            }
+
+            .chatbot-footer input {
+                border-radius: 30px;
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+
+            .send-button {
+                border-radius: 50%;
+                width: 45px;
+                height: 45px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+
+            .send-button:hover {
+                background-color: #0069d9;
+                transform: scale(1.1);
+            }
+        </style>
+
+        <!-- JavaScript Functionality -->
+        <!-- JavaScript Functionality -->
+        <script>
+            const chatbotToggler = document.querySelector('.chatbot-toggler');
+            const chatbot = document.querySelector('.chatbot');
+            const closeChatbot = document.querySelector('.close-chatbot');
+            const sendButton = document.querySelector('.send-button');
+
+            chatbotToggler.addEventListener('click', () => {
+                chatbot.style.display = chatbot.style.display === 'flex' ? 'none' : 'flex';
+            });
+
+            closeChatbot.addEventListener('click', () => {
+                chatbot.style.display = 'none';
+            });
+
+            sendButton.addEventListener('click', sendMessage);
+
+            function sendMessage() {
+                const inputField = document.getElementById('userInput');
+                const message = inputField.value.trim();
+
+                if (message === '') return;
+
+                const chatbotBody = document.querySelector('.chatbot-body');
+
+                // Add user's message
+                const userMsg = document.createElement('div');
+                userMsg.className = 'user-message';
+                userMsg.textContent = message;
+                chatbotBody.appendChild(userMsg);
+
+                chatbotBody.scrollTop = chatbotBody.scrollHeight;
+                inputField.value = '';
+
+                // Add automatic bot reply after 1 second
+                setTimeout(() => {
+                    const botMsg = document.createElement('div');
+                    botMsg.className = 'bot-message';
+
+                    // You can make responses smarter here!
+                    let reply = getBotReply(message);
+
+                    botMsg.textContent = reply;
+                    chatbotBody.appendChild(botMsg);
+                    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+                }, 1000); // 1-second delay
+            }
+
+            // Custom Bot Reply Function
+            function getBotReply(userMessage) {
+                userMessage = userMessage.toLowerCase();
+
+                if (userMessage.includes('hello') || userMessage.includes('hi')) {
+                    return "Hello! How can I help you today? 😊";
+                } else if (userMessage.includes('price')) {
+                    return "Our prices depend on the services you choose. Can you tell me which service you're interested in?";
+                } else if (userMessage.includes('thank')) {
+                    return "You're welcome! Feel free to ask if you need anything else.";
+                } else if (userMessage.includes('bye')) {
+                    return "Goodbye! Have a great day!";
+                } else {
+                    return "I'm not sure how to respond to that. Please ask me something else!";
+                }
+            }
+
+            // Trigger send on Enter key
+            document.getElementById('userInput').addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+        </script>
+
+
+    </section>
+
+
+
+
+
     <!-- Navbar -->
     <div id="navbar-container"></div>
 
@@ -343,7 +605,7 @@
                     letter-spacing: 0.03em;
                     text-align: justify;">We offer a comprehensive range of HTD (Hire, Train, and Deploy) solutions
                         tailored
-                        to the unique demands of the IT field, redefining talent acquisition, development, and
+                        to the unique demands of the IT Industry, redefining talent acquisition, development, and
                         deployment. Whether for small businesses or multinational corporations, our services assist
                         clients in sourcing, training, and placing the right personnel. Our customized training
                         programs, including accent-neutral communication, technical expertise, and cultural alignment,

@@ -16,7 +16,7 @@
     <!-- banner styles and scripts -->
     <script src="./bannerscript/bannerscript.js"></script>
     <link rel="stylesheet" href="./bannerstyles/bannerstyle.css">
-    </script>
+
 
 
 
@@ -24,9 +24,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <style>
-        *{
+        * {
             font-family: 'Poppins', sans-serif;
-          
+
         }
     </style>
 
@@ -37,13 +37,19 @@
 
 
 
+
+
+
+
+
+
     <div id="navbar-container"></div>
 
     <!-- banner -->
     <div class="banner-container">
         <img src="./assets/banner/about.png" alt="IT Solutions Banner" class="banner-image">
         <div class="overlay-text">
-            <h1 > Seamless Staffing Limitless Growth</h1>
+            <h1> Seamless Staffing Limitless Growth</h1>
             <p class="banner-paragraph">"Streamline your workforce strategies with our comprehensive Talent Management
                 solutions. From staffing to career development, we ensure the right talent meets the right
                 opportunities." </p>
@@ -55,12 +61,279 @@
 
 
 
+
+    <!-- Call Button -->
+    <a href="tel:+911234567890" class="btn btn-success rounded-circle call-button shadow">
+        <i class="fas fa-phone"></i>
+    </a>
+
+    <!-- Chatbot Section -->
+    <section id="chatbot-section">
+
+        <!-- Bootstrap & Font Awesome -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+        <!-- Chatbot Toggle Button -->
+        <button class="btn btn-primary rounded-circle chatbot-toggler shadow">
+            <i class="fas fa-comment-alt"></i>
+        </button>
+
+        <!-- Chatbot Box -->
+        <div class="chatbot shadow-lg">
+            <div
+                class="chatbot-header bg-primary text-white d-flex justify-content-between align-items-center p-3 rounded-top">
+                <h5 class="mb-0">Chat Support</h5>
+                <button class="btn-close btn-close-white close-chatbot"></button>
+            </div>
+
+            <div class="chatbot-body p-3 d-flex flex-column gap-3">
+                <div class="bot-message bg-light p-2 rounded">Hello! How can I assist you?</div>
+            </div>
+
+            <div class="chatbot-footer d-flex p-3 gap-2 border-top">
+                <input type="text" class="form-control" id="userInput" placeholder="Type a message...">
+                <button class="btn btn-primary send-button"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+
+        <!-- Styles for Call Button & Chatbot -->
+        <style>
+            /* Call Button */
+            .call-button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+
+                font-size: 24px;
+                z-index: 999;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s ease, background-color 0.3s ease;
+            }
+
+            .call-button:hover {
+                transform: scale(1.1);
+                background-color: #28a745;
+            }
+
+            /* Chatbot Section */
+            #chatbot-section {
+                position: relative;
+                z-index: 999;
+            }
+
+            /* Chatbot Toggle Button */
+            .chatbot-toggler {
+                position: fixed;
+                bottom: 100px;
+                /* moved down a bit for gap from call button */
+                right: 20px;
+
+                font-size: 20px;
+                z-index: 1000;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+                transition: transform 0.3s ease, background-color 0.3s ease;
+            }
+
+            .chatbot-toggler:hover {
+                transform: scale(1.1);
+                background-color: #0069d9;
+            }
+
+            /* Chatbot Window */
+            .chatbot {
+                position: fixed;
+                bottom: 160px;
+                /* more gap from toggler button */
+                right: 20px;
+                width: 320px;
+                background: #ffffff;
+                border-radius: 15px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+                display: none;
+                flex-direction: column;
+                animation: slideUp 0.3s ease-out;
+            }
+
+            @keyframes slideUp {
+                from {
+                    transform: translateY(20px);
+                    opacity: 0;
+                }
+
+                to {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            /* Chatbot Body */
+            .chatbot-body {
+                height: 260px;
+                overflow-y: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                /* GAP between each message */
+                padding: 15px;
+            }
+
+            .chatbot-body::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            .chatbot-body::-webkit-scrollbar-thumb {
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+            }
+
+            .user-message {
+                align-self: flex-end;
+                background-color: #dcf8c6;
+                color: #000;
+                padding: 12px 15px;
+                border-radius: 20px 20px 0 20px;
+                max-width: 80%;
+                font-size: 14px;
+            }
+
+            .bot-message {
+                align-self: flex-start;
+                background-color: #f1f1f1;
+                color: #000;
+                padding: 12px 15px;
+                border-radius: 20px 20px 20px 0;
+                max-width: 80%;
+                font-size: 14px;
+            }
+
+            /* Chatbot Footer */
+            .chatbot-footer {
+                display: flex;
+                padding: 15px;
+                /* More space */
+                gap: 10px;
+                /* Gap between input and button */
+                border-top: 1px solid #ddd;
+            }
+
+            .chatbot-footer input {
+                border-radius: 30px;
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+
+            .send-button {
+                border-radius: 50%;
+                width: 45px;
+                height: 45px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+
+            .send-button:hover {
+                background-color: #0069d9;
+                transform: scale(1.1);
+            }
+        </style>
+
+        <!-- JavaScript Functionality -->
+        <!-- JavaScript Functionality -->
+        <script>
+            const chatbotToggler = document.querySelector('.chatbot-toggler');
+            const chatbot = document.querySelector('.chatbot');
+            const closeChatbot = document.querySelector('.close-chatbot');
+            const sendButton = document.querySelector('.send-button');
+
+            chatbotToggler.addEventListener('click', () => {
+                chatbot.style.display = chatbot.style.display === 'flex' ? 'none' : 'flex';
+            });
+
+            closeChatbot.addEventListener('click', () => {
+                chatbot.style.display = 'none';
+            });
+
+            sendButton.addEventListener('click', sendMessage);
+
+            function sendMessage() {
+                const inputField = document.getElementById('userInput');
+                const message = inputField.value.trim();
+
+                if (message === '') return;
+
+                const chatbotBody = document.querySelector('.chatbot-body');
+
+                // Add user's message
+                const userMsg = document.createElement('div');
+                userMsg.className = 'user-message';
+                userMsg.textContent = message;
+                chatbotBody.appendChild(userMsg);
+
+                chatbotBody.scrollTop = chatbotBody.scrollHeight;
+                inputField.value = '';
+
+                // Add automatic bot reply after 1 second
+                setTimeout(() => {
+                    const botMsg = document.createElement('div');
+                    botMsg.className = 'bot-message';
+
+                    // You can make responses smarter here!
+                    let reply = getBotReply(message);
+
+                    botMsg.textContent = reply;
+                    chatbotBody.appendChild(botMsg);
+                    chatbotBody.scrollTop = chatbotBody.scrollHeight;
+                }, 1000); // 1-second delay
+            }
+
+            // Custom Bot Reply Function
+            function getBotReply(userMessage) {
+                userMessage = userMessage.toLowerCase();
+
+                if (userMessage.includes('hello') || userMessage.includes('hi')) {
+                    return "Hello! How can I help you today? 😊";
+                } else if (userMessage.includes('price')) {
+                    return "Our prices depend on the services you choose. Can you tell me which service you're interested in?";
+                } else if (userMessage.includes('thank')) {
+                    return "You're welcome! Feel free to ask if you need anything else.";
+                } else if (userMessage.includes('bye')) {
+                    return "Goodbye! Have a great day!";
+                } else {
+                    return "I'm not sure how to respond to that. Please ask me something else!";
+                }
+            }
+
+            // Trigger send on Enter key
+            document.getElementById('userInput').addEventListener('keydown', function (e) {
+                if (e.key === 'Enter') {
+                    sendMessage();
+                }
+            });
+        </script>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Talent Management Section -->
     <section class="py-5">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-8 col-12">
-                    <h2 class="h3 fw-bold mb-4 text-primary-light "  style="font-size: 24px;">Streamlining Talent Management for Business Growth
+                    <h2 class="h3 fw-bold mb-4 text-primary-light " style="font-size: 24px;">Streamlining Talent
+                        Management for Business Growth
                     </h2>
 
                     <p class="mb-4" style="
@@ -71,11 +344,11 @@
                     letter-spacing: 0.06em;
                     text-align: justify;
                     margin-bottom: 16px;">
-                    HRIFY specializes in providing comprehensive talent management services tailored to meet diverse
-                    business needs, with a focus on IT Staffing. We offer flexible solutions, including:
-                </p>
-                
-                <ul class="list-disc pl-5 mb-4" style="
+                        HRIFY specializes in providing comprehensive talent management services tailored to meet diverse
+                        business needs, with a focus on IT Staffing. We offer flexible solutions, including:
+                    </p>
+
+                    <ul class="list-disc pl-5 mb-4" style="
                     font-family: 'Poppins', sans-serif;
                     font-weight: 500;
                     font-size: 18px;
@@ -85,35 +358,37 @@
                     margin-bottom: 16px;
                     padding-left: 20px; /* Adjust bullet point indent */
                     list-style-type: disc;">
-                    
-                    <li style="margin-bottom: 10px;">
-                        <strong>Contract Staffing</strong> – Flexible staffing for short-term or project-based
-                        needs, giving you access to skilled professionals when you need them.
-                    </li>
-                    
-                    <li style="margin-bottom: 10px;">
-                        <strong>Permanent Placement</strong> – We connect you with top talent for long-term roles,
-                        ensuring the right fit for your organization.
-                    </li>
-                    
-                    <li>
-                        <strong>Contract-to-Hire</strong> – A flexible option allowing you to evaluate talent before
-                        transitioning them into permanent positions.
-                    </li>
-                </ul>
-                
+
+                        <li style="margin-bottom: 10px;">
+                            <strong>Contract Staffing</strong> – Flexible staffing for short-term or project-based
+                            needs, giving you access to skilled professionals when you need them.
+                        </li>
+
+                        <li style="margin-bottom: 10px;">
+                            <strong>Permanent Placement</strong> – We connect you with top talent for long-term roles,
+                            ensuring the right fit for your organization.
+                        </li>
+
+                        <li>
+                            <strong>Contract-to-Hire</strong> – A flexible option allowing you to evaluate talent before
+                            transitioning them into permanent positions.
+                        </li>
+                    </ul>
+
 
 
 
                     <div class="mb-4">
-                        <h3 class="h5 fw-bold text-primary-light" style="font-size: 20px;">Contract Staffing and Placement</h3>
+                        <h3 class="h5 fw-bold text-primary-light" style="font-size: 20px;">Contract Staffing and
+                            Placement</h3>
                         <p style="
                         font-family: 'Poppins', sans-serif;
                         font-weight: 500;
                         font-size: 18px;
                         line-height: 24px;
                         letter-spacing: 0.06em;
-                        text-align: justify;">Flexible staffing solutions to address short-term or project-based workforce requirements
+                        text-align: justify;">Flexible staffing solutions to address short-term or project-based
+                            workforce requirements
                             with skilled professionals.
                             We provide end-to-end recruitment services to help businesses find and retain top talent for
                             long-term, full-time roles. Our rigorous screening process ensures candidates are the right
@@ -135,14 +410,15 @@
                 <div class="col-lg-8 col-12">
 
                     <div class="mb-4">
-                        <h3 class="h5 fw-bold text-primary-light" style="font-size: 20px;" >Contract-to-Hire</h3>
+                        <h3 class="h5 fw-bold text-primary-light" style="font-size: 20px;">Contract-to-Hire</h3>
                         <p style="
                         font-family: 'Poppins', sans-serif;
                         font-weight: 500;
                         font-size: 18px;
                         line-height: 24px;
                         letter-spacing: 0.06em;
-                        text-align: justify;">Our Contract-to-Hire solutions offer flexibility for businesses to assess a candidate’s
+                        text-align: justify;">Our Contract-to-Hire solutions offer flexibility for businesses to assess
+                            a candidate’s
                             performance and cultural fit before making a permanent hiring decision. This approach
                             minimizes hiring risks, ensures seamless transitions, and helps organizations secure top
                             talent with confidence.</p>
@@ -156,7 +432,8 @@
                         font-size: 18px;
                         line-height: 24px;
                         letter-spacing: 0.06em;
-                        text-align: justify;">We provide comprehensive recruitment services to help businesses find the right talent for
+                        text-align: justify;">We provide comprehensive recruitment services to help businesses find the
+                            right talent for
                             long-term success. Our rigorous screening and selection process ensures that candidates not
                             only possess the required skills but also align with your company’s culture and vision. With
                             our expertise, you can build a strong, dedicated workforce that drives growth and stability.
@@ -183,7 +460,8 @@
                         font-size: 18px;
                         line-height: 24px;
                         letter-spacing: 0.06em;
-                        text-align: justify;">Our Supplier Rationalization services help organizations optimize their vendor base by
+                        text-align: justify;">Our Supplier Rationalization services help organizations optimize their
+                            vendor base by
                             consolidating suppliers, reducing redundancy, and improving procurement efficiency. This
                             approach enhances cost savings, strengthens supplier relationships, ensures consistent
                             quality, and simplifies contract management, ultimately driving greater operational
@@ -199,7 +477,8 @@
                         font-size: 18px;
                         line-height: 24px;
                         letter-spacing: 0.06em;
-                        text-align: justify;">Our Hire, Train & Deploy model is designed to deliver job-ready professionals tailored to
+                        text-align: justify;">Our Hire, Train & Deploy model is designed to deliver job-ready
+                            professionals tailored to
                             your business requirements. We identify the right candidates, provide them with
                             industry-specific training, and deploy them directly into your projects. This approach
                             ensures faster onboarding, reduced training costs, and a workforce equipped with the skills
@@ -365,10 +644,10 @@
                                     <option value="contract-to-hire">Contract-to-Hire</option>
                                     <option value="hire-train-deploy">Hire, Train & Deploy Services</option>
                                     <option value="supplier-rationalization">Supplier Rationalization</option>
-                                 
 
-                                   
-            
+
+
+
                                     <option value="leadership-consulting">Leadership Consulting</option>
                                     <option value="talent-management">Talent Management Solutions</option>
                                     <option value="career-opportunities">Career Opportunities</option>
