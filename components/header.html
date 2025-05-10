@@ -1,10 +1,13 @@
 <!-- navbar.html -->
 <style>
     .navbar-nav .nav-link {
-        font-size: 15px !important; /* Decreased font size */
+        font-size: 14px !important;
+        /* Decreased font size */
     }
+
     .dropdown-menu .dropdown-item {
-        font-size: 0.85rem; /* Smaller font size for dropdown items */
+        font-size: 0.85rem;
+        /* Smaller font size for dropdown items */
     }
 </style>
 <nav class="navbar navbar-expand-lg navbar-light bg-white" id="navbar-container">
@@ -20,7 +23,8 @@
                 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="talentmanagement.html">Talent Management</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         Product
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="productDropdown">
@@ -31,7 +35,8 @@
                 <li class="nav-item"><a class="nav-link" href="Industries.html">Industries</a></li>
                 <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="careersDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="careersDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
                         Careers
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="careersDropdown">
@@ -40,9 +45,32 @@
                         <li><a class="dropdown-item" href="referalprogram.html">Referral Program</a></li>
                     </ul>
                 </li>
+
+          <li class="nav-item">
+  <a class="nav-link blinking-text" href="../Hrify_Academy.html">academy</a>
+</li>
+
+<style>
+  .blinking-text {
+    color: #d10000;
+    font-weight: bold;
+    animation: blink-text 1s step-start infinite;
+  }
+
+  @keyframes blink-text {
+    50% {
+      visibility: hidden;
+    }
+  }
+</style>
+
+
+
+
                 <!-- Mobile view buttons -->
                 <li class="nav-item d-lg-none">
-                    <a class="btn btn-primary rounded-pill px-3 d-block text-center mb-2" href="Contactus.html">Contact Us</a>
+                    <a class="btn btn-primary rounded-pill px-3 d-block text-center mb-2" href="Contactus.html">Contact
+                        Us</a>
                     <a class="btn btn-primary rounded-pill px-3 d-block text-center" href="">Login</a>
                 </li>
             </ul>
