@@ -17,9 +17,15 @@ body {
 .text-primary-dark { color: var(--primary-dark); }
 .text-primary-light { color: var(--primary-light); }
 
+
+
+
+
 /* Navbar Styles */
-.navbar {
-    padding: 15px 0;
+
+
+/* .navbar {
+    padding: 10px 0;
     background: var(--white);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
@@ -34,8 +40,7 @@ body {
     margin: 0 10px;
     position: relative;
     transition: all 0.3s ease;
-    font-size: 0.9rem; /* Decreased font size */
-
+    font-size: 0.9rem; /* Decreased font size
 }
 
 .navbar-nav .nav-link:hover,
@@ -75,7 +80,95 @@ body {
 .navbar-nav .dropdown-item:hover {
     background-color: var(--primary-light);
     color: var(--white);
+} */
+
+
+ 
+
+/* navbar.css */
+
+.navbar {
+    padding: 10px 0;
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
+.navbar-brand img {
+    height: 55px;
+}
+
+.navbar-nav .nav-link {
+    color: #000000 !important;
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: var(--primary-light) !important;
+}
+
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-light);
+}
+
+.navbar-nav .nav-link.contact-btn {
+    background: var(--primary-color);
+    color: var(--white) !important;
+    padding: 8px 25px !important;
+    border-radius: 40px;
+}
+
+.navbar-nav .dropdown-menu {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.navbar-nav .dropdown-item {
+    color: #000000;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.navbar-nav .dropdown-item:hover {
+    background-color: var(--primary-light);
+    color: var(--white);
+}
+
+.blinking-text {
+    color: #d10000;
+    font-weight: bold;
+    animation: blink-text 1s step-start infinite;
+}
+
+@keyframes blink-text {
+    50% {
+        visibility: hidden;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Banner Section */
 .banner-button {
