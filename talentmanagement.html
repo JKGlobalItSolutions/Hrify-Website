@@ -79,7 +79,7 @@
                 position: fixed;
                 bottom: 20px;
                 right: 20px;
-              
+
                 font-size: 24px;
                 z-index: 999;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -103,7 +103,7 @@
                 bottom: 100px;
                 /* moved down a bit for gap from call button */
                 right: 20px;
-              
+
                 font-size: 20px;
                 z-index: 1000;
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -299,7 +299,7 @@
     <div id="navbar-container"></div>
 
     <!-- banner -->
-    <div class="banner-container">
+    <!-- <div class="banner-container">
         <img src="./assets/banner/Talent mangement Banner.png" alt="IT Solutions Banner" class="banner-image">
         <div class="overlay-text">
             <h1>Dynamic Solutions for Dynamic Teams</h1>
@@ -307,7 +307,30 @@
                 to transform your business and elevate success."</p>
             <button class="cta-button" id="cta-button">Unlock the Future of Talent</button>
         </div>
+    </div> -->
+
+
+    <style>
+        .banner-image {
+            width: 100%;
+            height: 140vh;
+            /* 40% of viewport height */
+            object-fit: cover;
+        }
+
+        @media (max-width: 576px) {
+            .banner-image {
+                height: 40vh;
+                /* smaller height for mobile */
+            }
+        }
+    </style>
+
+    <div class="banner-container w-100">
+        <img src="./assets/banner/Talent Management Banner.jpg" alt="IT Solutions Banner" class="banner-image">
     </div>
+
+
     </div>
 
 
@@ -670,22 +693,24 @@
                                 <input type="tel" class="form-control form-control-lg rounded-3 border-light-subtle"
                                     id="phoneNumber">
                             </div>
-                           
+
 
                             <div class="mb-4">
-                                <label for="seeking" class="form-label text-primary-light fw-semibold">I am seeking</label>
+                                <label for="seeking" class="form-label text-primary-light fw-semibold">I am
+                                    seeking</label>
                                 <select id="seeking" class="form-select form-select-lg rounded-3 border-light-subtle">
                                     <option value="">Select an option</option>
-                                    <option value="Contract Staffing and Placement">Contract Staffing and Placement</option>
+                                    <option value="Contract Staffing and Placement">Contract Staffing and Placement
+                                    </option>
                                     <option value="Contract to Hire">Contract to Hire</option>
                                     <option value="Permanent Staffing">Permanent Staffing</option>
                                     <option value="Supplier Rationalization">Supplier Rationalization</option>
                                     <option value="Hire, Train & Deploy">Hire, Train & Deploy</option>
                                 </select>
                             </div>
-                            
 
-                            
+
+
                             <div class="mb-4">
                                 <label for="expectations" class="form-label text-primary-light fw-semibold">Give us an
                                     overview of your expectations</label>
