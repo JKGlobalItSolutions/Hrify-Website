@@ -1,28 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white align-items-center" id="navbar-container">
     <div class="container-fluid d-flex justify-content-between align-items-center ">
 
+
+
         <a class="navbar-brand me-4" href="#">
-            <img id="brand-logo" src="../assets/logo/Frame 999.png" alt="NewBrand">
+            <img src="../assets//logo/Frame 999.png" alt="NewBrand">
         </a>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const logo = document.getElementById("brand-logo");
-                const path = window.location.pathname.toLowerCase();
-
-                // Debug: see what the path actually is
-                console.log("Current path:", path);
-
-                if (path.includes("trust")) {
-                    logo.src = "../assets/logo/Frame 723-nav.jpg";
-                }
-            });
-        </script>
-
-
-
-
-
+        
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -82,9 +67,8 @@
                 </li> -->
 
                 <!-- Mobile buttons -->
-                <li class="nav-item d-lg-none">
-                    <a class="btn btn-primary d-block text-center mb-2" style="background-color: #097493;"
-                        href="Contactus.html">Contact Us</a>
+                <li class="nav-item d-lg-none" >
+                    <a class="btn btn-primary d-block text-center mb-2" style="background-color: #097493;" href="Contactus.html">Contact Us</a>
                     <a class="btn btn-primary d-block text-center" href="#" style="background-color: #097493;">Login</a>
                 </li>
             </ul>

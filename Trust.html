@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,10 @@
     <script src="./bannerscript/bannerscript.js"></script>
     <link rel="stylesheet" href="./bannerstyles/bannerstyle.css">
 
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
     <!-- Google Fonts Import -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
@@ -29,27 +34,29 @@
             justify-content: center;
             gap: 20px;
             padding: 20px;
-            flex-wrap: wrap; /* Allows wrapping when needed */
+            flex-wrap: wrap;
+            /* Allows wrapping when needed */
         }
 
-        .three-columns > div {
+        .three-columns>div {
             background: linear-gradient(to bottom, #00bfff, white);
             padding: 20px;
             border-radius: 5px;
             width: 28%;
-            min-width: 260px; /* Prevents box from becoming too small */
+            min-width: 260px;
+            /* Prevents box from becoming too small */
             box-sizing: border-box;
         }
 
         /* Responsive adjustments */
         @media (max-width: 992px) {
-            .three-columns > div {
+            .three-columns>div {
                 width: 45%;
             }
         }
 
         @media (max-width: 600px) {
-            .three-columns > div {
+            .three-columns>div {
                 width: 100%;
             }
 
@@ -59,64 +66,143 @@
             }
         }
     </style>
+
+
 </head>
+
 <body>
-    
-<div id="navbar-container"></div>
 
-<div>
-    <img style="width: 100%; height: auto;" src="assets/Trust/img1.png" alt="">
-</div>
 
-<div>
-    <center>
-        <h1 style="margin-top: 50px; margin-bottom: 50px;">
-            <b>We Organize Job Fairs for leading tech <br/>and non-tech companies</b>
-        </h1>
-    </center>
-    <p style="margin-left: 180px; max-width: 80%; font-size: 20px; justify-content: flex-start;">
-        HRIFY specifically organise job fair for entry level people. Job fair India organises job fair to connect job seekers with potential employers. These events provide an opportunity for job seekers to meet with representatives from different companies and learn about job openings, career paths, and industry trends.
-    </p>
-</div>
 
-<div class="three-columns">
-    <!-- Feature Column -->
-    <div>
-        <h3 style="margin-top:0;">Feature</h3>
-        <ul style="margin:0; padding-left:20px; line-height: 33px;">
-            <li>2 years of experience in Job for industry.</li>
-            <li>Organised more than 10 job fairs till now.</li>
-            <li>Having 100+ TOP Leading companies as clients.</li>
-            <li>More than 500+ unemployed youth were provided good job opportunities in reputed companies.</li>
-        </ul>
+    <div id="">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-white align-items-center" id="">
+            <div class="container-fluid d-flex justify-content-between align-items-center ">
+
+                <a class="navbar-brand me-4" href="#">
+                    <img src="../assets//logo/Frame 723-nav.jpg" alt="NewBrand">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav d-flex align-items-center gap-2">
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="talentmanagement.html">Talent Management</a></li>
+
+                        <!-- Product Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="productDropdown" role="button"
+                                data-bs-toggle="dropdown">
+                                Product
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="productDropdown">
+                                <li><a class="dropdown-item" href="salenutpam.html">Salenutpam</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="Industries.html">Industries</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Trust.html">Trust</a></li>
+
+
+                        <!-- Careers Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="careersDropdown" role="button"
+                                data-bs-toggle="dropdown">
+                                Careers
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="careersDropdown">
+                                <li><a class="dropdown-item" href="Careers.html">Careers</a></li>
+                                <li><a class="dropdown-item" href="../Internship.html">Internship</a></li>
+                                <li><a class="dropdown-item" href="referalprogram.html">Referral Program</a></li>
+                                <li class="dropdown-item">
+                                    <a class="nav-link blinking-text" href="Hrify_Academy.html">Academy</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Mobile buttons -->
+                        <li class="nav-item d-lg-none">
+                            <a class="btn btn-primary d-block text-center mb-2" style="background-color: #097493;"
+                                href="Contactus.html">Contact Us</a>
+                            <a class="btn btn-primary d-block text-center" href="#"
+                                style="background-color: #097493;">Login</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Desktop buttons -->
+                <div class="d-none d-lg-flex gap-2">
+                    <a class="btn btn-primary" style="background-color: #097493;" href="Contactus.html">Contact Us</a>
+                    <a class="btn btn-primary" href="https://hrify-7b064.web.app/"
+                        style="background-color: #097493;">Login</a>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
     </div>
 
-    <!-- Jobseekers Column -->
     <div>
-        <h3 style="margin-top:0;">Jobseekers</h3>
-        <ul style="margin:0; padding-left:20px;">
-            <li>Meet with multiple employers in one location.</li>
-            <li>Learn about job openings and company cultures.</li>
-            <li>Make a positive impression with recruiters and hiring managers.</li>
-            <li>Network with other job seekers and industry professionals.</li>
-            <li>Get career advice and interview tips from experts.</li>
-        </ul>
+        <img style="width: 100%; height: auto;" src="assets/Trust/img1.png" alt="">
     </div>
 
-    <!-- Employers Column -->
     <div>
-        <h3 style="margin-top:0;">Employers</h3>
-        <ul style="margin:0; padding-left:20px;">
-            <li>Meet with a large number of potential candidates in a short amount of time</li>
-            <li>Showcase your company and employment opportunities</li>
-            <li>Assess candidate skills and qualifications in person</li>
-            <li>Build brand awareness and establish relationships with job seekers</li>
-        </ul>
+        <center>
+            <h1 style="margin-top: 50px; margin-bottom: 50px;">
+                <b>We Organize Job Fairs for leading tech <br />and non-tech companies</b>
+            </h1>
+        </center>
+        <p style="margin-left: 180px; max-width: 80%; font-size: 20px; justify-content: flex-start;">
+            HRIFY specifically organise job fair for entry level people. Job fair India organises job fair to connect
+            job seekers with potential employers. These events provide an opportunity for job seekers to meet with
+            representatives from different companies and learn about job openings, career paths, and industry trends.
+        </p>
     </div>
-</div>
-<div style="text-align:center; margin-top:20px; margin-bottom: 20px; ">
-    <a href="#" 
-       style="display:inline-block; 
+
+    <div class="three-columns">
+        <!-- Feature Column -->
+        <div>
+            <h3 style="margin-top:0;">Feature</h3>
+            <ul style="margin:0; padding-left:20px; line-height: 33px;">
+                <li>2 years of experience in Job for industry.</li>
+                <li>Organised more than 10 job fairs till now.</li>
+                <li>Having 100+ TOP Leading companies as clients.</li>
+                <li>More than 500+ unemployed youth were provided good job opportunities in reputed companies.</li>
+            </ul>
+        </div>
+
+        <!-- Jobseekers Column -->
+        <div>
+            <h3 style="margin-top:0;">Jobseekers</h3>
+            <ul style="margin:0; padding-left:20px;">
+                <li>Meet with multiple employers in one location.</li>
+                <li>Learn about job openings and company cultures.</li>
+                <li>Make a positive impression with recruiters and hiring managers.</li>
+                <li>Network with other job seekers and industry professionals.</li>
+                <li>Get career advice and interview tips from experts.</li>
+            </ul>
+        </div>
+
+        <!-- Employers Column -->
+        <div>
+            <h3 style="margin-top:0;">Employers</h3>
+            <ul style="margin:0; padding-left:20px;">
+                <li>Meet with a large number of potential candidates in a short amount of time</li>
+                <li>Showcase your company and employment opportunities</li>
+                <li>Assess candidate skills and qualifications in person</li>
+                <li>Build brand awareness and establish relationships with job seekers</li>
+            </ul>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:20px; margin-bottom: 20px; ">
+        <a href="#" style="display:inline-block; 
               padding:10px 25px; 
               background:linear-gradient(to right, #00a2c6, #003f4f); 
               color:white; 
@@ -124,565 +210,620 @@
               text-decoration:none; 
               border-radius:8px; 
               font-family:Arial, sans-serif;">
-        Explore More
-    </a>
-</div>
+            Explore More
+        </a>
+    </div>
 
-<div class="container-fluid mt-5" style="background-color: #dce7ed;" >
-   <div class="row align-items-center" style="margin: 0;">
-    
-    <!-- Left content -->
-    <div class="col-lg-6 d-flex justify-content-center">
-        <div style="background: linear-gradient(to bottom right, #ffffff, #d7eff7); 
+    <div class="container-fluid mt-5" style="background-color: #dce7ed;">
+        <div class="row align-items-center" style="margin: 0;">
+
+            <!-- Left content -->
+            <div class="col-lg-6 d-flex justify-content-center">
+                <div style="background: linear-gradient(to bottom right, #ffffff, #d7eff7); 
                     border-radius: 15px; 
                     border: 3px solid #0593b4; 
                     max-width: 400px; 
                     padding: 20px; 
                     box-shadow: 5px 5px 10px rgba(0,0,0,0.2); 
                     font-family: Arial, sans-serif;">
-    
-            <h2 style="color: #0593b4; 
+
+                    <h2 style="color: #0593b4; 
                        font-weight: bold; 
                        margin-top: 0;">
-                New Candidate
-            </h2>
-    
-            <p style="font-weight: bold; 
+                        New Candidate
+                    </h2>
+
+                    <p style="font-weight: bold; 
                       color: #000; 
                       font-size: 14px; 
                       line-height: 1.6;">
-                A new candidate brings fresh energy, ideas, and perspectives to the team. 
-                With the right guidance, they can quickly adapt, contribute, and grow into 
-                a valuable asset for the organization
-            </p>
-    
-            <div style="text-align: center; margin-top: 20px;">
-    <a href="#" onclick="toggleCandidateModal(); return false;"
-       style="display: inline-block; 
+                        A new candidate brings fresh energy, ideas, and perspectives to the team.
+                        With the right guidance, they can quickly adapt, contribute, and grow into
+                        a valuable asset for the organization
+                    </p>
+
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="#" onclick="toggleCandidateModal(); return false;" style="display: inline-block; 
               padding: 10px 25px; 
               background: linear-gradient(to right, #00a2c6, #003f4f); 
               color: white; 
               font-weight: bold; 
               text-decoration: none; 
               border-radius: 8px;">
-        Go To Form
-    </a>
-</div>
+                            Go To Form
+                        </a>
+                    </div>
 
-<!-- Modal -->
-<div id="candidateModal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                    <!-- Modal -->
+                    <div id="candidateModal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
      background: rgba(0,0,0,0.5); z-index: 9999; overflow-y: auto;">
-    <div style="background: white; margin: 50px auto; padding: 20px; border-radius: 10px; 
+                        <div style="background: white; margin: 50px auto; padding: 20px; border-radius: 10px; 
                 max-width: 900px; box-shadow: 0 0 20px rgba(0,0,0,0.3);">
 
-        <!-- Close -->
-        <div style="text-align: right;">
-            <span onclick="toggleCandidateModal()" 
-                  style="cursor: pointer; font-size: 24px; font-weight: bold; color: #555;">&times;</span>
-        </div>
+                            <!-- Close -->
+                            <div style="text-align: right;">
+                                <span onclick="toggleCandidateModal()"
+                                    style="cursor: pointer; font-size: 24px; font-weight: bold; color: #555;">&times;</span>
+                            </div>
 
-        <!-- Form -->
-        <form style="width: 100%;">
-            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Full Name</label>
-                    <input type="text" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Email Address</label>
-                    <input type="email" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Phone Number</label>
-                    <input type="tel" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Age</label>
-                    <input type="number" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Gender</label>
-                    <input type="text" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Educational Qualification</label>
-<select
-  style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;"
-  onchange="document.getElementById('eduInput').value = this.value;"
->
-    <option value="">Select qualification</option>
-    <option>Not completed class 10</option>
-    <option>Completed Class 10</option>
-    <option>Completed Class 12</option>
-    <option>ITI</option>
-    <option>Diploma in Computer Science</option>
-    <option>Diploma in Civil</option>
-    <option>Diploma in Automobiles</option>
-    <option>Diploma in Electronics & Communication</option>
-    <option>Diploma in Electrical</option>
-    <option>Diploma in Interior Decoration</option>
-    <option>Diploma in Fashion</option>
-    <option>BA</option>
-    <option>BSC</option>
-    <option>BCOM</option>
-    <option>BBA</option>
-    <option>BMS</option>
-    <option>BFA</option>
-    <option>BEM</option>
-    <option>BE Civil Engineering</option>
-    <option>BE Mechanical Engineering</option>
-    <option>BE Electrical and Electronics Engineering</option>
-    <option>BE Electronics and Communications Engineering</option>
-    <option>BE Instrumentation and Control Engineering</option>
-    <option>BE Computer Science and Engineering</option>
-    <option>BE Information Technology</option>
-    <option>BE Petroleum Engineering</option>
-    <option>BE Chemical Engineering</option>
-    <option>BE Biotechnology</option>
-    <option>MA</option>
-    <option>Msc</option>
-    <option>Mcom</option>
-    <option>MBA</option>
-    <option>MCA</option>
-    <option>MSW</option>
-    <option>Mphil</option>
-    <option>D. Voc</option>
-    <option>B. Voc</option>
-    <option>M. Voc</option>
-    <option>Other Vocational Certificate Courses</option>
-</select>
+                            <!-- Form -->
+                            <form style="width: 100%;">
+                                <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                                    <div style="flex: 1; min-width: 45%;">
+                                        <label style="font-weight:bold; color:#0593b4;">Full Name</label>
+                                        <input type="text"
+                                            style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                    </div>
+                                    <div style="flex: 1; min-width: 45%;">
+                                        <label style="font-weight:bold; color:#0593b4;">Email Address</label>
+                                        <input type="email"
+                                            style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                    </div>
+                                    <div style="flex: 1; min-width: 45%;">
+                                        <label style="font-weight:bold; color:#0593b4;">Phone Number</label>
+                                        <input type="tel"
+                                            style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                    </div>
+                                    <div style="flex: 1; min-width: 45%;">
+                                        <label style="font-weight:bold; color:#0593b4;">Age</label>
+                                        <input type="number"
+                                            style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                    </div>
+                                    <div style="flex: 1; min-width: 45%;">
+                                        <label style="font-weight:bold; color:#0593b4;">Gender</label>
+                                        <input type="text"
+                                            style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                    </div>
+                                    <div style="flex: 1; min-width: 45%;">
+                                        <label style="font-weight:bold; color:#0593b4;">Educational
+                                            Qualification</label>
+                                        <select
+                                            style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;"
+                                            onchange="document.getElementById('eduInput').value = this.value;">
+                                            <option value="">Select qualification</option>
+                                            <option>Not completed class 10</option>
+                                            <option>Completed Class 10</option>
+                                            <option>Completed Class 12</option>
+                                            <option>ITI</option>
+                                            <option>Diploma in Computer Science</option>
+                                            <option>Diploma in Civil</option>
+                                            <option>Diploma in Automobiles</option>
+                                            <option>Diploma in Electronics & Communication</option>
+                                            <option>Diploma in Electrical</option>
+                                            <option>Diploma in Interior Decoration</option>
+                                            <option>Diploma in Fashion</option>
+                                            <option>BA</option>
+                                            <option>BSC</option>
+                                            <option>BCOM</option>
+                                            <option>BBA</option>
+                                            <option>BMS</option>
+                                            <option>BFA</option>
+                                            <option>BEM</option>
+                                            <option>BE Civil Engineering</option>
+                                            <option>BE Mechanical Engineering</option>
+                                            <option>BE Electrical and Electronics Engineering</option>
+                                            <option>BE Electronics and Communications Engineering</option>
+                                            <option>BE Instrumentation and Control Engineering</option>
+                                            <option>BE Computer Science and Engineering</option>
+                                            <option>BE Information Technology</option>
+                                            <option>BE Petroleum Engineering</option>
+                                            <option>BE Chemical Engineering</option>
+                                            <option>BE Biotechnology</option>
+                                            <option>MA</option>
+                                            <option>Msc</option>
+                                            <option>Mcom</option>
+                                            <option>MBA</option>
+                                            <option>MCA</option>
+                                            <option>MSW</option>
+                                            <option>Mphil</option>
+                                            <option>D. Voc</option>
+                                            <option>B. Voc</option>
+                                            <option>M. Voc</option>
+                                            <option>Other Vocational Certificate Courses</option>
+                                        </select>
 
-<!-- This is your input box, value will update on select -->
+                                        <!-- This is your input box, value will update on select -->
 
-                </div>
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Other Please Specify</label>
-                    <input type="text" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Any Experience</label>
-                    <input type="text" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Address</label>
-                    <textarea style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc; height:60px;"></textarea>
-                </div>
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Skills Known</label>
-                    <input type="text" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Current Employee Status</label>
-<div style="position:relative; width:100%;">
-  <input
-    id="employeeStatusInput"
-    type="text"
-    style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;"
-    onclick="showDropdown()" 
-    readonly
-    placeholder="Select status"
-  >
+                                    </div>
+                                    <div style="flex: 1; min-width: 45%;">
+                                        <label style="font-weight:bold; color:#0593b4;">Other Please Specify</label>
+                                        <input type="text"
+                                            style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                    </div>
+                                    <div style="flex: 1; min-width: 45%;">
+                                        <label style="font-weight:bold; color:#0593b4;">Any Experience</label>
+                                        <input type="text"
+                                            style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                    </div>
+                                    <div style="flex: 1; min-width: 45%;">
+                                        <label style="font-weight:bold; color:#0593b4;">Address</label>
+                                        <textarea
+                                            style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc; height:60px;"></textarea>
+                                    </div>
+                                    <div style="flex: 1; min-width: 45%;">
+                                        <label style="font-weight:bold; color:#0593b4;">Skills Known</label>
+                                        <input type="text"
+                                            style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                    </div>
+                                    <div style="flex: 1; min-width: 45%;">
+                                        <label style="font-weight:bold; color:#0593b4;">Current Employee Status</label>
+                                        <div style="position:relative; width:100%;">
+                                            <input id="employeeStatusInput" type="text"
+                                                style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;"
+                                                onclick="showDropdown()" readonly placeholder="Select status">
 
-  <!-- Dropdown options -->
-  <div
-    id="dropdownStatus"
-    style="display:none; position:absolute; top:40px; left:0; width:100%; border:1px solid #ccc; background:#fff; z-index:10; box-shadow:0 2px 4px rgba(0,0,0,0.07); border-radius:5px;"
-  >
-    <div style="padding:8px; cursor:pointer;" onclick="setStatus('Unemployed')">Unemployed</div>
-    <div style="padding:8px; cursor:pointer;" onclick="setStatus('Employed but looking for better opportunity')">Employed but looking for better opportunity</div>
-    <div style="padding:8px; cursor:pointer;" onclick="setStatus('Looking for my first job')">Looking for my first job</div>
-  </div>
-</div>
+                                            <!-- Dropdown options -->
+                                            <div id="dropdownStatus"
+                                                style="display:none; position:absolute; top:40px; left:0; width:100%; border:1px solid #ccc; background:#fff; z-index:10; box-shadow:0 2px 4px rgba(0,0,0,0.07); border-radius:5px;">
+                                                <div style="padding:8px; cursor:pointer;"
+                                                    onclick="setStatus('Unemployed')">Unemployed</div>
+                                                <div style="padding:8px; cursor:pointer;"
+                                                    onclick="setStatus('Employed but looking for better opportunity')">
+                                                    Employed but looking for better opportunity</div>
+                                                <div style="padding:8px; cursor:pointer;"
+                                                    onclick="setStatus('Looking for my first job')">Looking for my first
+                                                    job</div>
+                                            </div>
+                                        </div>
 
-<script>
-function showDropdown() {
-  document.getElementById('dropdownStatus').style.display = 'block';
-}
-function setStatus(val) {
-  document.getElementById('employeeStatusInput').value = val;
-  document.getElementById('dropdownStatus').style.display = 'none';
-}
-document.addEventListener('click', function(e) {
-  // close dropdown if clicked outside
-  if (!e.target.matches('#employeeStatusInput')) {
-    document.getElementById('dropdownStatus').style.display = 'none';
-  }
-});
-</script>
-                </div>
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Language Known</label>
-                    <input type="text" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-                <div style="flex: 1; min-width: 100%;">
-                    <label style="font-weight:bold; color:#0593b4;">Additional Information</label>
-                    <textarea style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc; height:60px;"></textarea>
-                </div>
-                <div style="flex: 1; min-width: 100%;">
-                    <label style="font-weight:bold; color:#0593b4;">Attachment</label>
-                    <input type="file" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                        <script>
+                                            function showDropdown() {
+                                                document.getElementById('dropdownStatus').style.display = 'block';
+                                            }
+                                            function setStatus(val) {
+                                                document.getElementById('employeeStatusInput').value = val;
+                                                document.getElementById('dropdownStatus').style.display = 'none';
+                                            }
+                                            document.addEventListener('click', function (e) {
+                                                // close dropdown if clicked outside
+                                                if (!e.target.matches('#employeeStatusInput')) {
+                                                    document.getElementById('dropdownStatus').style.display = 'none';
+                                                }
+                                            });
+                                        </script>
+                                    </div>
+                                    <div style="flex: 1; min-width: 45%;">
+                                        <label style="font-weight:bold; color:#0593b4;">Language Known</label>
+                                        <input type="text"
+                                            style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                    </div>
+                                    <div style="flex: 1; min-width: 100%;">
+                                        <label style="font-weight:bold; color:#0593b4;">Additional Information</label>
+                                        <textarea
+                                            style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc; height:60px;"></textarea>
+                                    </div>
+                                    <div style="flex: 1; min-width: 100%;">
+                                        <label style="font-weight:bold; color:#0593b4;">Attachment</label>
+                                        <input type="file"
+                                            style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                    </div>
+                                </div>
+                                <div style="text-align:center; margin-top:20px;">
+                                    <button type="submit"
+                                        style="padding: 10px 25px; background: linear-gradient(to right, #00a2c6, #003f4f); color: white; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">
+                                        Submit Application
+                                    </button>
+                                </div>
+                                <p style="text-align:center; font-size: 12px; color: #777; margin-top: 15px;">
+                                    By submitting your application, you consent to the processing of your personal
+                                    information as per our privacy policy. Your details will only be used for
+                                    recruitment purposes.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+
+                    <script>
+                        function toggleCandidateModal() {
+                            var modal = document.getElementById('candidateModal');
+                            if (modal.style.display === 'none' || modal.style.display === '') {
+                                modal.style.display = 'block';
+                            } else {
+                                modal.style.display = 'none';
+                            }
+                        }
+                    </script>
+
                 </div>
             </div>
-            <div style="text-align:center; margin-top:20px;">
-                <button type="submit" style="padding: 10px 25px; background: linear-gradient(to right, #00a2c6, #003f4f); color: white; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">
-                    Submit Application
-                </button>
-            </div>
-            <p style="text-align:center; font-size: 12px; color: #777; margin-top: 15px;">
-                By submitting your application, you consent to the processing of your personal information as per our privacy policy. Your details will only be used for recruitment purposes.
-            </p>
-        </form>
-    </div>
-</div>
 
-<script>
-function toggleCandidateModal() {
-    var modal = document.getElementById('candidateModal');
-    if (modal.style.display === 'none' || modal.style.display === '') {
-        modal.style.display = 'block';
-    } else {
-        modal.style.display = 'none';
-    }
-}
-</script>
+            <!-- Right image -->
+            <div class="col-lg-6 d-flex justify-content-center">
+                <img src="assets/Trust/img3.png" style="max-width: 70%; height: auto;" alt="">
+            </div>
 
         </div>
-    </div>
-    
-    <!-- Right image -->
-    <div class="col-lg-6 d-flex justify-content-center">
-        <img src="assets/Trust/img3.png" style="max-width: 70%; height: auto;" alt="">
-    </div>
-
-</div>
 
 
 
 
 
-<div class="container-fluid mt-5" >
-   <div class="row align-items-center" style="margin: 0;">
-    
-     <!-- Right image -->
-    <div class="col-lg-6 d-flex justify-content-center">
-        <img src="assets/Trust/img4.png" style="max-width: 70%; height: auto;" alt="">
-    </div>
+        <div class="container-fluid mt-5">
+            <div class="row align-items-center" style="margin: 0;">
+
+                <!-- Right image -->
+                <div class="col-lg-6 d-flex justify-content-center">
+                    <img src="assets/Trust/img4.png" style="max-width: 70%; height: auto;" alt="">
+                </div>
 
 
-    <!-- Left content -->
-    <div class="col-lg-6 d-flex justify-content-center">
-        <div style="background: linear-gradient(to bottom right, #ffffff, #d7eff7); 
+                <!-- Left content -->
+                <div class="col-lg-6 d-flex justify-content-center">
+                    <div style="background: linear-gradient(to bottom right, #ffffff, #d7eff7); 
                     border-radius: 15px; 
                     border: 3px solid #0593b4; 
                     max-width: 400px; 
                     padding: 20px; 
                     box-shadow: 5px 5px 10px rgba(0,0,0,0.2); 
                     font-family: Arial, sans-serif;">
-    
-            <h2 style="color: #0593b4; 
+
+                        <h2 style="color: #0593b4; 
                        font-weight: bold; 
                        margin-top: 0;">
-                Client Registration Form for Job Fair
-            </h2>
-    
-            <p style="font-weight: bold; 
+                            Client Registration Form for Job Fair
+                        </h2>
+
+                        <p style="font-weight: bold; 
                       color: #000; 
                       font-size: 14px; 
                       line-height: 1.6;">
-                Join us at the Job Fair to connect with top-tier talent and build your dream team. This is the perfect platform for clients to meet, engage, and hire skilled professionals across diverse industries
-            </p>
-    
-            <div style="text-align: center; margin-top: 20px;">
-    <a href="#" onclick="toggleForm()" 
-       style="display: inline-block; 
+                            Join us at the Job Fair to connect with top-tier talent and build your dream team. This is
+                            the perfect platform for clients to meet, engage, and hire skilled professionals across
+                            diverse industries
+                        </p>
+
+                        <div style="text-align: center; margin-top: 20px;">
+                            <a href="#" onclick="toggleForm()" style="display: inline-block; 
               padding: 10px 25px; 
               background: linear-gradient(to right, #00a2c6, #003f4f); 
               color: white; 
               font-weight: bold; 
               text-decoration: none; 
               border-radius: 8px;">
-        Go To Form
-    </a>
-</div>
+                                Go To Form
+                            </a>
+                        </div>
 
-<!-- Full Page Modal Form -->
-<div id="formContainer" 
-     style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+                        <!-- Full Page Modal Form -->
+                        <div id="formContainer" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
             background: rgba(0,0,0,0.5); z-index: 9999; overflow-y: auto;">
 
-    <div style="background: white; margin: 50px auto; padding: 20px; border-radius: 10px; 
+                            <div style="background: white; margin: 50px auto; padding: 20px; border-radius: 10px; 
                 max-width: 900px; box-shadow: 0 0 20px rgba(0,0,0,0.3);">
 
-        <!-- Close Button -->
-        <div style="text-align: right;">
-            <span onclick="toggleForm()" 
-                  style="cursor: pointer; font-size: 24px; font-weight: bold; color: #555;">&times;</span>
-        </div>
+                                <!-- Close Button -->
+                                <div style="text-align: right;">
+                                    <span onclick="toggleForm()"
+                                        style="cursor: pointer; font-size: 24px; font-weight: bold; color: #555;">&times;</span>
+                                </div>
 
-        <form style="width:100%;">
-            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-                
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Company Name</label>
-                    <input type="text" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                <form style="width:100%;">
+                                    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight:bold; color:#0593b4;">Company Name</label>
+                                            <input type="text"
+                                                style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                        </div>
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight:bold; color:#0593b4;">Industry Type</label>
+                                            <input type="text"
+                                                style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                        </div>
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight:bold; color:#0593b4;">Website URL</label>
+                                            <input type="text"
+                                                style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                        </div>
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight:bold; color:#0593b4;">Company Address</label>
+                                            <input type="text"
+                                                style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                        </div>
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight:bold; color:#0593b4;">Contact Person Name</label>
+                                            <input type="text"
+                                                style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                        </div>
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight:bold; color:#0593b4;">Designation</label>
+                                            <input type="text"
+                                                style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                        </div>
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight:bold; color:#0593b4;">Email ID</label>
+                                            <input type="email"
+                                                style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                        </div>
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight:bold; color:#0593b4;">Phone Number</label>
+                                            <input type="tel"
+                                                style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                        </div>
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight:bold; color:#0593b4;">Number of Vacancies</label>
+                                            <input type="tel"
+                                                style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                        </div>
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight:bold; color:#0593b4;">Job Roles Offered</label>
+                                            <input type="tel"
+                                                style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                        </div>
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight:bold; color:#0593b4;">Eligibility Criteria
+                                                (Education/Skills/Experience)</label>
+                                            <input type="tel"
+                                                style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                        </div>
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight:bold; color:#0593b4;">Job Location(s)</label>
+                                            <input type="tel"
+                                                style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                        </div>
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight:bold; color:#0593b4;">CTC / Salary Range</label>
+                                            <input type="tel"
+                                                style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                        </div>
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight:bold; color:#0593b4;">Any Special Requests or
+                                                Notes</label>
+                                            <input type="tel"
+                                                style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                        </div>
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight:bold; color:#0593b4;">Mode of Employment
+                                                (Permanent / Contract / Internship)</label>
+                                            <input type="tel"
+                                                style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
+                                        </div>
+
+                                    </div>
+
+                                    <div style="text-align:center; margin-top:20px;">
+                                        <button type="submit"
+                                            style="padding: 10px 25px; background: linear-gradient(to right, #00a2c6, #003f4f); color: white; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">
+                                            Submit Application
+                                        </button>
+                                    </div>
+                                    <p style="text-align:center; font-size: 12px; color: #777; margin-top: 15px;">
+                                        By submitting your application, you consent to the processing of your personal
+                                        information as per our privacy policy. Your details will only be used for
+                                        recruitment purposes.
+                                    </p>
+                                </form>
+
+                            </div>
+                        </div>
+
+                        <script>
+                            function toggleForm() {
+                                var form = document.getElementById("formContainer");
+                                if (form.style.display === "none" || form.style.display === "") {
+                                    form.style.display = "block";
+                                } else {
+                                    form.style.display = "none";
+                                }
+                            }
+                        </script>
+                    </div>
                 </div>
 
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Industry Type</label>
-                    <input type="text" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
 
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Website URL</label>
-                    <input type="text" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
 
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Company Address</label>
-                    <input type="text" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Contact Person Name</label>
-                    <input type="text" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Designation</label>
-                    <input type="text" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Email ID</label>
-                    <input type="email" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Phone Number</label>
-                    <input type="tel" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Number of Vacancies</label>
-                    <input type="tel" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Job Roles Offered</label>
-                    <input type="tel" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Eligibility Criteria (Education/Skills/Experience)</label>
-                    <input type="tel" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Job Location(s)</label>
-                    <input type="tel" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">CTC / Salary Range</label>
-                    <input type="tel" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Any Special Requests or Notes</label>
-                    <input type="tel" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight:bold; color:#0593b4;">Mode of Employment (Permanent / Contract / Internship)</label>
-                    <input type="tel" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;">
-                </div>
-                
             </div>
 
-            <div style="text-align:center; margin-top:20px;">
-                <button type="submit" style="padding: 10px 25px; background: linear-gradient(to right, #00a2c6, #003f4f); color: white; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">
-                    Submit Application
-                </button>
-            </div>
-            <p style="text-align:center; font-size: 12px; color: #777; margin-top: 15px;">
-                By submitting your application, you consent to the processing of your personal information as per our privacy policy. Your details will only be used for recruitment purposes.
-            </p>
-        </form>
-
-    </div>
-</div>
-
-<script>
-function toggleForm() {
-    var form = document.getElementById("formContainer");
-    if (form.style.display === "none" || form.style.display === "") {
-        form.style.display = "block";
-    } else {
-        form.style.display = "none";
-    }
-}
-</script>
-        </div>
-    </div>
-    
-   
-
-</div>
 
 
 
+            <div class="row align-items-center" style="margin: 0;">
 
-<div class="row align-items-center" style="margin: 0;">
-    
-   <!-- Left content -->
-    <div class="col-lg-6 d-flex justify-content-center">
-        <div style="background: linear-gradient(to bottom right, #ffffff, #d7eff7); 
+                <!-- Left content -->
+                <div class="col-lg-6 d-flex justify-content-center">
+                    <div style="background: linear-gradient(to bottom right, #ffffff, #d7eff7); 
                     border-radius: 15px; 
                     border: 3px solid #0593b4; 
                     max-width: 400px; 
                     padding: 20px; 
                     box-shadow: 5px 5px 10px rgba(0,0,0,0.2); 
                     font-family: Arial, sans-serif;">
-    
-            <h2 style="color: #0593b4; 
+
+                        <h2 style="color: #0593b4; 
                        font-weight: bold; 
                        margin-top: 0;">
-                Trust
-            </h2>
-    
-            <p style="font-weight: bold; 
+                            Trust
+                        </h2>
+
+                        <p style="font-weight: bold; 
                       color: #000; 
                       font-size: 14px; 
                       line-height: 1.6;">
-                Job Fairs build a bridge of trust between job seekers and employers by offering transparent, face-to-face interactions. It's a trusted platform where real opportunities meet real talent
-            </p>
-    
-            <div style="text-align: center; margin-top: 20px;">
-    <a href="#" class="form-trigger-btn" 
-       style="display: inline-block; padding: 10px 25px; background: linear-gradient(to right, #00a2c6, #003f4f); color: white; font-weight: bold; text-decoration: none; border-radius: 8px;">
-        Go To Form
-    </a>
-</div>
+                            Job Fairs build a bridge of trust between job seekers and employers by offering transparent,
+                            face-to-face interactions. It's a trusted platform where real opportunities meet real talent
+                        </p>
 
-<!-- Full Page Modal Form -->
-<div class="application-modal" style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; overflow-y: auto;">
-    <div class="application-modal-content" 
-         style="background: white; margin: 50px auto; padding: 20px; border-radius: 10px; max-width: 900px; box-shadow: 0 0 20px rgba(0,0,0,0.3);">
+                        <div style="text-align: center; margin-top: 20px;">
+                            <a href="#" class="form-trigger-btn"
+                                style="display: inline-block; padding: 10px 25px; background: linear-gradient(to right, #00a2c6, #003f4f); color: white; font-weight: bold; text-decoration: none; border-radius: 8px;">
+                                Go To Form
+                            </a>
+                        </div>
 
-        <!-- Close Button -->
-        <div style="text-align: right;">
-            <span class="modal-close-btn" style="cursor: pointer; font-size: 24px; font-weight: bold; color: #555;">&times;</span>
-        </div>
+                        <!-- Full Page Modal Form -->
+                        <div class="application-modal"
+                            style="display:none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; overflow-y: auto;">
+                            <div class="application-modal-content"
+                                style="background: white; margin: 50px auto; padding: 20px; border-radius: 10px; max-width: 900px; box-shadow: 0 0 20px rgba(0,0,0,0.3);">
 
-        <!-- Form -->
-        <form class="application-form" style="width:100%;">
-            <div class="form-fields-wrapper" style="display: flex; flex-wrap: wrap; gap: 20px;">
+                                <!-- Close Button -->
+                                <div style="text-align: right;">
+                                    <span class="modal-close-btn"
+                                        style="cursor: pointer; font-size: 24px; font-weight: bold; color: #555;">&times;</span>
+                                </div>
 
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight: bold; color: #0593b4;">Organized by: [Your Trust Name]</label>
-                    <input type="text" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+                                <!-- Form -->
+                                <form class="application-form" style="width:100%;">
+                                    <div class="form-fields-wrapper" style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight: bold; color: #0593b4;">Organized by: [Your Trust
+                                                Name]</label>
+                                            <input type="text"
+                                                style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+                                        </div>
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight: bold; color: #0593b4;">Location</label>
+                                            <input type="text"
+                                                style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+                                        </div>
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight: bold; color: #0593b4;">Full Name</label>
+                                            <input type="text"
+                                                style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+                                        </div>
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight: bold; color: #0593b4;">Date of Birth</label>
+                                            <input type="date"
+                                                style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+                                        </div>
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight: bold; color: #0593b4;">Gender</label>
+                                            <input type="text"
+                                                style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+                                        </div>
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight: bold; color: #0593b4;">Mobile Number</label>
+                                            <input type="tel"
+                                                style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+                                        </div>
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight: bold; color: #0593b4;">Email ID</label>
+                                            <input type="email"
+                                                style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+                                        </div>
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight: bold; color: #0593b4;">Address</label>
+                                            <textarea
+                                                style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc; height: 60px;"></textarea>
+                                        </div>
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight: bold; color: #0593b4;">Educational
+                                                Qualification</label>
+                                            <input type="text"
+                                                style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+                                        </div>
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight: bold; color: #0593b4;">Employment Details</label>
+                                            <input type="text"
+                                                style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+                                        </div>
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight: bold; color: #0593b4;">Skills /
+                                                Certifications</label>
+                                            <input type="text"
+                                                style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+                                        </div>
+
+                                        <div style="flex: 1; min-width: 45%;">
+                                            <label style="font-weight: bold; color: #0593b4;">Attachment</label>
+                                            <input type="file"
+                                                style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+                                        </div>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <div style="text-align: center; margin-top: 20px;">
+                                        <button type="submit"
+                                            style="padding: 10px 25px; background: linear-gradient(to right, #00a2c6, #003f4f); color: white; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">
+                                            Submit Application
+                                        </button>
+                                    </div>
+
+                                    <!-- Privacy Note -->
+                                    <p style="text-align: center; font-size: 12px; color: #777; margin-top: 15px;">
+                                        By submitting your application, you consent to the processing of your personal
+                                        information as per our privacy policy. Your details will only be used for
+                                        recruitment purposes.
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+
+                        <script>
+                            function toggleApplicationModal() {
+                                const modal = document.querySelector('.application-modal');
+                                modal.style.display = (modal.style.display === 'none' || modal.style.display === '') ? 'block' : 'none';
+                            }
+
+                            document.querySelector('.form-trigger-btn').addEventListener('click', function (event) {
+                                event.preventDefault();
+                                toggleApplicationModal();
+                            });
+
+                            document.querySelector('.modal-close-btn').addEventListener('click', toggleApplicationModal);
+                        </script>
+                    </div>
                 </div>
 
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight: bold; color: #0593b4;">Location</label>
-                    <input type="text" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
+                <!-- Right image -->
+                <div class="col-lg-6 d-flex justify-content-center">
+                    <img src="assets/Trust/img5.png" style="max-width: 70%; height: auto;" alt="">
                 </div>
 
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight: bold; color: #0593b4;">Full Name</label>
-                    <input type="text" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
-                </div>
-
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight: bold; color: #0593b4;">Date of Birth</label>
-                    <input type="date" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
-                </div>
-
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight: bold; color: #0593b4;">Gender</label>
-                    <input type="text" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
-                </div>
-
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight: bold; color: #0593b4;">Mobile Number</label>
-                    <input type="tel" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
-                </div>
-
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight: bold; color: #0593b4;">Email ID</label>
-                    <input type="email" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
-                </div>
-
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight: bold; color: #0593b4;">Address</label>
-                    <textarea style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc; height: 60px;"></textarea>
-                </div>
-
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight: bold; color: #0593b4;">Educational Qualification</label>
-                    <input type="text" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
-                </div>
-
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight: bold; color: #0593b4;">Employment Details</label>
-                    <input type="text" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
-                </div>
-
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight: bold; color: #0593b4;">Skills / Certifications</label>
-                    <input type="text" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
-                </div>
-
-                <div style="flex: 1; min-width: 45%;">
-                    <label style="font-weight: bold; color: #0593b4;">Attachment</label>
-                    <input type="file" style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;">
-                </div>
             </div>
 
-            <!-- Submit Button -->
-            <div style="text-align: center; margin-top: 20px;">
-                <button type="submit" style="padding: 10px 25px; background: linear-gradient(to right, #00a2c6, #003f4f); color: white; font-weight: bold; border: none; border-radius: 8px; cursor: pointer;">
-                    Submit Application
-                </button>
+
+
+            <div class="row">
+                <div class="col">
+
+                </div>
+                <div class="col"></div>
             </div>
 
-            <!-- Privacy Note -->
-            <p style="text-align: center; font-size: 12px; color: #777; margin-top: 15px;">
-                By submitting your application, you consent to the processing of your personal information as per our privacy policy. Your details will only be used for recruitment purposes.
-            </p>
-        </form>
-    </div>
-</div>
-
-<script>
-function toggleApplicationModal() {
-    const modal = document.querySelector('.application-modal');
-    modal.style.display = (modal.style.display === 'none' || modal.style.display === '') ? 'block' : 'none';
-}
-
-document.querySelector('.form-trigger-btn').addEventListener('click', function(event) {
-    event.preventDefault();
-    toggleApplicationModal();
-});
-
-document.querySelector('.modal-close-btn').addEventListener('click', toggleApplicationModal);
-</script>
         </div>
-    </div>
-    
-    <!-- Right image -->
-    <div class="col-lg-6 d-flex justify-content-center">
-        <img src="assets/Trust/img5.png" style="max-width: 70%; height: auto;" alt="">
-    </div>
-
-</div>
 
 
-
-    <div class="row">
-        <div class="col">
-
-        </div>
-        <div class="col"></div>
-    </div>
-
-</div>
-
-
-<div id="footer"></div>
+        <div id="footer"></div>
 
 </body>
+
 </html>
